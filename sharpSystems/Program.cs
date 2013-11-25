@@ -19,10 +19,12 @@ namespace sharpSystems
             sys.PlaceSpecie(A, cell, 10);
             sys.PlaceSpecie(A, memb, 10);
             sys.PlaceSpecie(B, cell, 5);
-            ((Compartment)cell.TaggedComponent).PrintContents();
-            Console.WriteLine("Cell has C?: " + ((Compartment)cell.TaggedComponent).HasSpecie(C) + "\n");
 
-            ((ProtoSpecie)A.TaggedComponent).PrintWhereInUse();
+            var rxn1 = (CompartmentTransferReaction)sys.CreateTransferReaction("A move", A, cell, memb).TaggedComponent;
+            while (rxn1.OriginHasEnoughSpecie())
+            {
+                rxn1.FireReaction();
+            }
         }
     }
 }

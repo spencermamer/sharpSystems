@@ -44,6 +44,7 @@
     <Compile Include="Compartment.cs" />
     <Compile Include="CompartmentTransferReaction.cs" />
     <Compile Include="Component.cs" />
+    <Compile Include="IReaction.cs" />
     <Compile Include="MassTransferRateLaw.cs" />
     <Compile Include="ModelSystem.cs" />
     <Compile Include="Program.cs" />

@@ -11,5 +11,20 @@ namespace sharpSystems
         {
 
         }
+
+        public override void FireReaction()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool NeededSpeciesExist()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool ReactionVerified()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

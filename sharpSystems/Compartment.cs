@@ -8,7 +8,6 @@ namespace sharpSystems
     public class Compartment : Component
     {
         private double volume;
-
         public double Volume
         {
             get { return volume; }
@@ -36,14 +35,14 @@ namespace sharpSystems
 
         private void AddSpeciesEntry(Specie specie)
         {
-            species.Add(specie.myTag, specie);
+            species.Add(specie.MyTag, specie);
         }
 
         public Tag AddSpecie(ProtoSpecie proto, int quantity) 
         {
             Specie specie = new Specie(proto,this, quantity);
             AddSpeciesEntry(specie);
-            return specie.myTag;
+            return specie.MyTag;
         }
 
         public void PrintContents()
@@ -61,6 +60,18 @@ namespace sharpSystems
             return species.ContainsKey(specieTag);
         }
 
+        public Specie GetSpecie(Tag specieTag)
+        {
+            if (HasSpecie(specieTag))
+            {
+                return species[specieTag];
+            }
+            else
+            {
+                Console.WriteLine("Error: Compartment does not have species");
+                return null;
+            }
+        }
 
     }
 }

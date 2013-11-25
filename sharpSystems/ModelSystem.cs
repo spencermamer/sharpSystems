@@ -12,7 +12,7 @@ namespace sharpSystems
         private Dictionary<Tag, ProtoSpecie> protoSpecies = new Dictionary<Tag, ProtoSpecie>();
         private Dictionary<Tag, Compartment> compartments = new Dictionary<Tag, Compartment>();
         private List<Specie> species = new List<Specie>();
-
+        private Dictionary<Tag, CompartmentTransferReaction> transferReactions = new Dictionary<Tag, CompartmentTransferReaction>();
         public ModelSystem(string name)
         {
             this.name = name;
@@ -25,7 +25,7 @@ namespace sharpSystems
 
         private void AddProtoSpecieEntry(ProtoSpecie proto)
         {
-            protoSpecies.Add(proto.myTag, proto);
+            protoSpecies.Add(proto.MyTag, proto);
         }
 
         private void AddCompartmentEntry(Compartment comp)
@@ -37,7 +37,7 @@ namespace sharpSystems
         {
             ProtoSpecie proto = new ProtoSpecie(specieName);
             AddProtoSpecieEntry(proto);
-            return proto.myTag;
+            return proto.MyTag;
         }
 
         public Tag CreateCompartment(string name, double volume)
@@ -70,6 +70,19 @@ namespace sharpSystems
             Compartment location = compartments[compartmentTag];
             location.AddSpecie(prototype, quantity);
             prototype.AddLocationUseEntry(location);
+        }
+
+        private void AddTransferReactionEntry(CompartmentTransferReaction transferRxn)
+        {
+            transferReactions.Add(transferRxn.MyTag, transferRxn);
+        }
+
+        public Tag CreateTransferReaction(string name, Tag specieTag, Tag origin, Tag destination)
+        {
+            CompartmentTransferReaction transRxn = new CompartmentTransferReaction(name, specieTag, origin, destination);
+            AddTransferReactionEntry(transRxn);
+            return transRxn.MyTag;
+
         }
 
     }
