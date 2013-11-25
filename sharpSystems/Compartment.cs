@@ -7,7 +7,13 @@ namespace sharpSystems
 {
     public class Compartment : Component
     {
-        protected double volume;
+        private double volume;
+
+        public double Volume
+        {
+            get { return volume; }
+            set { volume = value; }
+        }
         protected Dictionary<Tag, Specie> species;
         private Tag tag;
 
