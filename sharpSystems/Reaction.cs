@@ -5,14 +5,11 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class Reaction : Component
+    public class Reaction : AbstractReaction
     {
-
-        public Reaction(string name)
-            : base(name)
+        public Reaction(string name) : base(name)
         {
 
         }
-
     }
 }
