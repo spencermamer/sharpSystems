@@ -25,7 +25,7 @@ namespace sharpSystems
 
         private void AddProtoSpecieEntry(ProtoSpecie proto)
         {
-            protoSpecies.Add(proto.Tag, proto);
+            protoSpecies.Add(proto.myTag, proto);
         }
 
         private void AddCompartmentEntry(Compartment comp)
@@ -37,7 +37,7 @@ namespace sharpSystems
         {
             ProtoSpecie proto = new ProtoSpecie(specieName);
             AddProtoSpecieEntry(proto);
-            return proto.Tag;
+            return proto.myTag;
         }
 
         public Tag CreateCompartment(string name, double volume)
@@ -58,6 +58,12 @@ namespace sharpSystems
             return compartments[compTag];
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="specieTag">Tag reffering to the ProtoSpecie from which the new Specie instance will be created</param>
+        /// <param name="compartmentTag">Tag referring to the compartment where new Specie instance will be created</param>
+        /// <param name="quantity">Initial number of molecules new Specie instance will have</param>
         public void PlaceSpecie(Tag specieTag, Tag compartmentTag, int quantity)
         {
             ProtoSpecie prototype = GetProtoSpecie(specieTag);

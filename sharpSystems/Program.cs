@@ -18,7 +18,6 @@ namespace sharpSystems
             var C = sys.CreateNewSpecie("C");
             sys.PlaceSpecie(A, cell, 10);
             sys.PlaceSpecie(A, memb, 10);
-
             sys.PlaceSpecie(B, cell, 5);
             ((Compartment)cell.TaggedComponent).PrintContents();
             Console.WriteLine("Cell has C?: " + ((Compartment)cell.TaggedComponent).HasSpecie(C) + "\n");

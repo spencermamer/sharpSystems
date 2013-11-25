@@ -36,14 +36,14 @@ namespace sharpSystems
 
         private void AddSpeciesEntry(Specie specie)
         {
-            species.Add(specie.Tag, specie);
+            species.Add(specie.myTag, specie);
         }
 
         public Tag AddSpecie(ProtoSpecie proto, int quantity) 
         {
             Specie specie = new Specie(proto,this, quantity);
             AddSpeciesEntry(specie);
-            return specie.Tag;
+            return specie.myTag;
         }
 
         public void PrintContents()
