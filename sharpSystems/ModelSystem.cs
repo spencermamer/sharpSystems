@@ -61,8 +61,9 @@ namespace sharpSystems
         public void PlaceSpecie(Tag specieTag, Tag compartmentTag, int quantity)
         {
             ProtoSpecie prototype = GetProtoSpecie(specieTag);
-            compartments[compartmentTag].AddSpecie(prototype, quantity);
-            prototype.SetUseStatus(true);
+            Compartment location = compartments[compartmentTag];
+            location.AddSpecie(prototype, quantity);
+            prototype.AddLocationUseEntry(location);
         }
 
     }

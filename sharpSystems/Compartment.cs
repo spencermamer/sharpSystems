@@ -35,7 +35,7 @@ namespace sharpSystems
 
         public Tag AddSpecie(ProtoSpecie proto, int quantity) 
         {
-            Specie specie = new Specie(proto, quantity);
+            Specie specie = new Specie(proto,this, quantity);
             AddSpeciesEntry(specie);
             return specie.Tag;
         }

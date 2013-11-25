@@ -10,16 +10,20 @@ namespace sharpSystems
     {
         static void Main(string[] args)
         {
-            ModelSystem sys = new ModelSystem("Test");
-            Tag cell = sys.CreateCompartment("Cell", 1.4);
-            Tag A = sys.CreateNewSpecie("A");
-            Tag B = sys.CreateNewSpecie("B");
-            Tag C = sys.CreateNewSpecie("C");
+            var sys = new ModelSystem("Test".ToLower());
+            var cell = sys.CreateCompartment("Cell", 1.4);
+            var memb = sys.CreateCompartment("membrane", 1.0);
+            var A = sys.CreateNewSpecie("A");
+            var B = sys.CreateNewSpecie("B");
+            var C = sys.CreateNewSpecie("C");
             sys.PlaceSpecie(A, cell, 10);
+            sys.PlaceSpecie(A, memb, 10);
+
             sys.PlaceSpecie(B, cell, 5);
             ((Compartment)cell.TaggedComponent).PrintContents();
-            Console.WriteLine("Cell has C?: " + ((Compartment)cell.TaggedComponent).HasSpecie(C));
+            Console.WriteLine("Cell has C?: " + ((Compartment)cell.TaggedComponent).HasSpecie(C) + "\n");
 
+            ((ProtoSpecie)A.TaggedComponent).PrintWhereInUse();
         }
     }
 }
