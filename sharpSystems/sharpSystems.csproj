@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractParameter.cs" />
     <Compile Include="Compartment.cs" />
     <Compile Include="CompartmentTransferReaction.cs" />
     <Compile Include="Component.cs" />
+    <Compile Include="GenericDoubleParameter.cs" />
     <Compile Include="IReaction.cs" />
     <Compile Include="MassTransferRateLaw.cs" />
     <Compile Include="ModelSystem.cs" />
@@ -51,9 +53,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProtoSpecie.cs" />
     <Compile Include="AbstractReaction.cs" />
+    <Compile Include="RateParameter.cs" />
     <Compile Include="Reaction.cs" />
     <Compile Include="Specie.cs" />
     <Compile Include="Tag.cs" />
+    <Compile Include="VolumeParameter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -7,9 +7,10 @@ namespace sharpSystems
 {
     public class Reaction : AbstractReaction
     {
+       
         public Reaction(string name) : base(name)
         {
-
+            
         }
 
         public override void FireReaction()
