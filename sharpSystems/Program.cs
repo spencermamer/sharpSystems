@@ -10,7 +10,7 @@ namespace sharpSystems
     {
         static void Main(string[] args)
         {
-            Cosmos sys = new Cosmos("Test");
+            ModelSystem sys = new ModelSystem("Test");
             Tag cell = sys.CreateCompartment("Cell", 1.4);
             Tag A = sys.CreateNewSpecie("A");
             Tag B = sys.CreateNewSpecie("B");
