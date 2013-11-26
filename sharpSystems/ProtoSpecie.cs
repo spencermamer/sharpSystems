@@ -8,7 +8,6 @@ namespace sharpSystems
 {
     public class ProtoSpecie : Component
     {
-        protected Tag myTag;
         private bool isInUse = false;
         public bool IsInUse
         {
@@ -17,11 +16,7 @@ namespace sharpSystems
         }
         private List<Compartment> specieLocations = new List<Compartment>();
 
-        public Tag MyTag
-        {
-            get { return myTag; }
-            protected set { myTag = value; }
-        }
+     
 
 
         /// <summary>
@@ -32,7 +27,6 @@ namespace sharpSystems
         /// <param name="name">Unique string identifying the chemical specie. (e.g. "O2", "VEGFA", "mRNA"</param>
         public ProtoSpecie(string name) : base(name)
         {
-            this.myTag = new Tag(this, "PROTOSPECIE_" + name); // Create a tag associated with this ProtoSpecie instance, and assign it an alias based off its name
         }
 
         private bool SetUseStatus(bool status) 

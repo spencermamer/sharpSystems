@@ -9,13 +9,6 @@ namespace sharpSystems
     {
         protected readonly static int _default_stoich = 1;
 
-        private Tag myTag;
-        public Tag MyTag
-        {
-            get { return myTag; }
-            private set { myTag = value; }
-        }
-
         protected RateParameter rateParameter;
         public RateParameter RateParameter
         {
@@ -34,7 +27,6 @@ namespace sharpSystems
         public AbstractReaction(string name, RateParameter rateParam)
             : base(name)
         {
-            this.MyTag = new Tag(this, "RXN_" + name);
             this.species = new List<Specie>();
             this.reactants = new List<Reagent>();
             this.products = new List<Reagent>();

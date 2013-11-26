@@ -9,6 +9,12 @@ namespace sharpSystems
     {
         string name;
         public static int componentCount;
+        private Tag myTag;
+        public Tag MyTag
+        {
+            get { return myTag; }
+            protected set { myTag = value; }
+        }
 
         public string Name
         {
@@ -19,6 +25,7 @@ namespace sharpSystems
         public Component(string name)
         {
             this.name = name.ToLower();
+            this.myTag = new Tag(this);
             ++componentCount;
         }
 

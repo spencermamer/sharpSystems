@@ -17,7 +17,6 @@ namespace sharpSystems
             : base(name)
         {
             this.rate = rxnRate;
-            this.MyTag = new Tag(this, "RATEPARAM_" + name);
         }
 
         public override double GetValue()

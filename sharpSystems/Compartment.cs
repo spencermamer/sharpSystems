@@ -21,12 +21,7 @@ namespace sharpSystems
             get { return parent; }
             set { parent = value; }
         }
-        private Tag myTag;
-        public Tag MyTag
-        {
-            get { return myTag; }
-            private set { myTag = value; }
-        }
+      
 
         // BEGIN CONSTRUCTO DECLARATIONS
 
@@ -49,7 +44,6 @@ namespace sharpSystems
 
         private void AddSpeciesEntry(Specie specie)
         {
-            species.Add(specie.MyTag, specie);
         }
 
         public Tag AddSpecie(ProtoSpecie proto, int quantity) 
