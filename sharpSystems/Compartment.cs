@@ -44,8 +44,12 @@ namespace sharpSystems
 
         private void AddSpeciesEntry(Specie specie)
         {
+            if(!HasSpecie(specie.MyTag) )
+            {
+                species.Add(specie.MyTag, specie);
+            }
         }
-
+        
         public Tag AddSpecie(ProtoSpecie proto, int quantity) 
         {
             if (!HasSpecie(proto.MyTag))
@@ -59,6 +63,11 @@ namespace sharpSystems
                 Console.WriteLine("Error: Compartment already contains specie {1}", proto.Name);
                 return null;
             }
+        }
+         
+        public void AddSpecie(Specie specie)
+        {
+            AddSpeciesEntry(specie);
         }
 
         public void PrintContents()

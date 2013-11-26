@@ -5,7 +5,7 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class Specie : ProtoSpecie
+    public class Specie : Component
     {
         
         protected Compartment location;
@@ -14,6 +14,7 @@ namespace sharpSystems
             get { return location; }
             protected set { location = value; }
         }
+        
         protected int quantity;
         public int Quantity
         {
@@ -22,7 +23,7 @@ namespace sharpSystems
         }
 
         //BEGIN CONSTRUCTOR DECLARATIONS
-
+        /*
         public Specie(ProtoSpecie prototype, Compartment location, int quantity)
             : base(prototype.Name)
         {
@@ -38,14 +39,32 @@ namespace sharpSystems
             }
             this.location = location;
         }
-
+        
         public Specie(ProtoSpecie prototype, Compartment location)
             : this(prototype,location, 0)
         {
 
         }
 
-        
+        */
+
+        public Specie(ProtoSpecie proto, Compartment location, int quantity)
+            : base(proto)
+        {
+            this.location = Location;
+
+            if (quantity >= 0) 
+            { 
+                this.quantity = quantity; 
+            }
+            else 
+            { 
+                this.quantity = 0; 
+            }
+
+            this.location.AddSpecie(this);
+        }
+
         // BEGIN METHOD DECLARATIONS
 
         public void DeltaQuantity(int delta) 
