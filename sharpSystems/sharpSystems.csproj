@@ -55,7 +55,10 @@
     <Compile Include="AbstractReaction.cs" />
     <Compile Include="RateParameter.cs" />
     <Compile Include="Reaction.cs" />
+    <Compile Include="ReactionRole.cs" />
+    <Compile Include="Reagent.cs" />
     <Compile Include="Specie.cs" />
+    <Compile Include="SpecieTransfer.cs" />
     <Compile Include="Tag.cs" />
     <Compile Include="VolumeParameter.cs" />
   </ItemGroup>
