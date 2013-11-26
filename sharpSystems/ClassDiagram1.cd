@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="sharpSystems.ProtoSpecie" Collapsed="true">
+    <Position X="7" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAQACAAAAgAAAAEAAAAAAAAAAAAAAAAAABAAAAQQA=</HashCode>
+      <FileName>ProtoSpecie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.Program" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.Tag" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAQAAAAAAAAAAAAAACQAAAAIAAAABAAA=</HashCode>
+      <FileName>Tag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.Component" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Component.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.Specie" Collapsed="true">
+    <Position X="7" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAACAAAAAACAQAAAgAAAAAA=</HashCode>
+      <FileName>Specie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.ModelSystem" Collapsed="true">
+    <Position X="7.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAQAAAQAAAEAAQAEAAAAAAAADACIABAEAAJAA=</HashCode>
+      <FileName>ModelSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.Compartment" Collapsed="true">
+    <Position X="4.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAABAAAAAQACAAAAAEAAABIIBAAACBQA=</HashCode>
+      <FileName>Compartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.Simulation.MassTransferRateLaw" Collapsed="true">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MassTransferRateLaw.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.AbstractReaction" Collapsed="true">
+    <Position X="2" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAACEAAAQEBAAAAAAFAAAAIBBACABQA=</HashCode>
+      <FileName>AbstractReaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.Reaction" Collapsed="true">
+    <Position X="2.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Reaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.TransferReaction" Collapsed="true">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAAAgAAAEAAAAAAEAAAAIAAQAAAgAEAAAABAgAAAg=</HashCode>
+      <FileName>TransferReaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.AbstractParameter" Collapsed="true">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQA=</HashCode>
+      <FileName>AbstractParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.RateParameter" Collapsed="true">
+    <Position X="13.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RateParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.VolumeParameter" Collapsed="true">
+    <Position X="11.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>VolumeParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.GenericDoubleParameter" Collapsed="true">
+    <Position X="15.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>GenericDoubleParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="sharpSystems.Reagent" Collapsed="true">
+    <Position X="9.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reagent.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="sharpSystems.IReaction" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IReaction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="sharpSystems.ReactionRole" Collapsed="true">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReactionRole.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
