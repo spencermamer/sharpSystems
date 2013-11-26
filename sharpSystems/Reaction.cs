@@ -5,27 +5,31 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class Reaction : AbstractReaction
+    public class Reaction : AbstractReaction, IReaction
     {
        
+
         public Reaction(string name) : base(name)
         {
             
         }
 
-        public override void FireReaction()
+        public void FireReaction()
         {
-            throw new NotImplementedException();
+
         }
 
-        public override bool NeededSpeciesExist()
+        public Specie[] GetInvolvedSpecies()
         {
-            throw new NotImplementedException();
+            return species.ToArray<Specie>();
         }
 
-        public override bool ReactionVerified()
+        
+
+        public bool IsValidReaction()
         {
-            throw new NotImplementedException();
+            return false;
         }
+
     }
 }

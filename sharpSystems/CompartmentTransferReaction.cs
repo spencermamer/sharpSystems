@@ -40,13 +40,18 @@ namespace sharpSystems
             {
                 this.origin = (Compartment)originTag.TaggedComponent;
                 this.destination = (Compartment)destTag.TaggedComponent;
-                if (this.origin.HasSpecie(specieTag))
+                if (this.origin.HasSpecie(specieTag) && this.destination.HasSpecie(specieTag))
                 {
                     this.originSpecie = this.origin.GetSpecie(specieTag);
-                }
-                if (this.destination.HasSpecie(specieTag))
-                {
+                    AddReactantEntry(this.originSpecie);
+
                     this.destSpecie = this.destination.GetSpecie(specieTag);
+                    AddProductEntry(this.destSpecie);
+                   
+                }
+                else
+                {
+                    Console.WriteLine("Error: Specie not present in both compartments!");
                 }
             }
             else

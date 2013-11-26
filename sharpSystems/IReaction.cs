@@ -7,6 +7,7 @@ namespace sharpSystems
 {
     public interface IReaction
     {
-
+        public void FireReaction();
+        public bool IsValidReaction();
     }
 }

@@ -7,20 +7,23 @@ namespace sharpSystems
 {
     public class ModelSystem
     {
-        private string name;
+        private string modelName;
+
+        private List<Specie> species = new List<Specie>();
 
         private Dictionary<Tag, ProtoSpecie> protoSpecies = new Dictionary<Tag, ProtoSpecie>();
         private Dictionary<Tag, Compartment> compartments = new Dictionary<Tag, Compartment>();
-        private List<Specie> species = new List<Specie>();
         private Dictionary<Tag, CompartmentTransferReaction> transferReactions = new Dictionary<Tag, CompartmentTransferReaction>();
+
+
         public ModelSystem(string name)
         {
-            this.name = name;
+            this.modelName = name;
         }
 
         public ModelSystem()
         {
-            this.name = "Model";
+            this.modelName = "Model";
         }
 
         private void AddProtoSpecieEntry(ProtoSpecie proto)
@@ -30,7 +33,7 @@ namespace sharpSystems
 
         private void AddCompartmentEntry(Compartment comp)
         {
-            compartments.Add(comp.Tag, comp);
+            compartments.Add(comp.MyTag, comp);
         }
 
         public Tag CreateNewSpecie(string specieName)
@@ -40,11 +43,18 @@ namespace sharpSystems
             return proto.MyTag;
         }
 
+        public Tag CreateCompartment(string name, Tag parentCompTag, double volume)
+        {
+            Compartment comp = new Compartment(name, (Compartment)parentCompTag.TaggedComponent, volume);
+            AddCompartmentEntry(comp);
+            return comp.MyTag;
+        }
+
         public Tag CreateCompartment(string name, double volume)
         {
             Compartment comp = new Compartment(name, volume);
             AddCompartmentEntry(comp);
-            return comp.Tag;
+            return comp.MyTag;
         }
 
 
@@ -84,6 +94,7 @@ namespace sharpSystems
             return transRxn.MyTag;
 
         }
-
+        
+        
     }
 }

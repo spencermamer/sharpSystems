@@ -14,24 +14,38 @@ namespace sharpSystems
             set { volume = value; }
         }
         protected Dictionary<Tag, Specie> species;
-        private Tag tag;
-
-        public Tag Tag
+        
+        private Compartment parent;
+        public Compartment Parent
         {
-            get { return tag; }
-            private set { tag = value; }
+            get { return parent; }
+            set { parent = value; }
+        }
+        private Tag myTag;
+        public Tag MyTag
+        {
+            get { return myTag; }
+            private set { myTag = value; }
         }
 
-        public Compartment(string name, double volume)
-            : base(name)
+        // BEGIN CONSTRUCTO DECLARATIONS
+
+        public Compartment(string name, Compartment parent, double volume) : base(name)
         {
+            this.myTag = new Tag(this, "COMPARTMENT_" + name);
             this.species = new Dictionary<Tag, Specie>();
+            this.parent = parent;
             this.volume = volume;
-            this.tag = new Tag(this);
+           
         }
+        public Compartment(string name, Compartment parent) : this(name, parent, 0.0) { }
+        public Compartment(string name, double volume) : this(name, null, volume)
+        {
+            
+        }
+        public Compartment(string name) : this(name, null, 0.0) { }
 
-        public Compartment(string name) : this(name, 0.0) { }
-
+        // BEGIN METHOD DECLARATIONS
 
         private void AddSpeciesEntry(Specie specie)
         {
@@ -40,9 +54,17 @@ namespace sharpSystems
 
         public Tag AddSpecie(ProtoSpecie proto, int quantity) 
         {
-            Specie specie = new Specie(proto,this, quantity);
-            AddSpeciesEntry(specie);
-            return specie.MyTag;
+            if (!HasSpecie(proto.MyTag))
+            {
+                Specie specie = new Specie(proto, this, quantity);
+                AddSpeciesEntry(specie);
+                return specie.MyTag;
+            }
+            else
+            {
+                Console.WriteLine("Error: Compartment already contains specie {1}", proto.Name)
+                return null;
+            }
         }
 
         public void PrintContents()
