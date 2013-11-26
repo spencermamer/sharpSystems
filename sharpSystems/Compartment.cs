@@ -62,7 +62,7 @@ namespace sharpSystems
             }
             else
             {
-                Console.WriteLine("Error: Compartment already contains specie {1}", proto.Name)
+                Console.WriteLine("Error: Compartment already contains specie {1}", proto.Name);
                 return null;
             }
         }

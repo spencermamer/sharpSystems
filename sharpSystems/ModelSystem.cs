@@ -13,7 +13,8 @@ namespace sharpSystems
 
         private Dictionary<Tag, ProtoSpecie> protoSpecies = new Dictionary<Tag, ProtoSpecie>();
         private Dictionary<Tag, Compartment> compartments = new Dictionary<Tag, Compartment>();
-        private Dictionary<Tag, CompartmentTransferReaction> transferReactions = new Dictionary<Tag, CompartmentTransferReaction>();
+        private Dictionary<Tag, TransferReaction> transferReactions = new Dictionary<Tag, TransferReaction>();
+        private Dictionary<Tag, Reaction> reactions = new Dictionary<Tag, Reaction>();
 
 
         public ModelSystem(string name)
@@ -68,32 +69,28 @@ namespace sharpSystems
             return compartments[compTag];
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="specieTag">Tag reffering to the ProtoSpecie from which the new Specie instance will be created</param>
-        /// <param name="compartmentTag">Tag referring to the compartment where new Specie instance will be created</param>
-        /// <param name="quantity">Initial number of molecules new Specie instance will have</param>
         public void PlaceSpecie(Tag specieTag, Tag compartmentTag, int quantity)
         {
             ProtoSpecie prototype = GetProtoSpecie(specieTag);
             Compartment location = compartments[compartmentTag];
-            location.AddSpecie(prototype, quantity);
+            
+            species.Add(((Specie)location.AddSpecie(prototype, quantity).TaggedComponent));
             prototype.AddLocationUseEntry(location);
         }
 
-        private void AddTransferReactionEntry(CompartmentTransferReaction transferRxn)
+        private void AddTransferReactionEntry(TransferReaction transferRxn)
         {
             transferReactions.Add(transferRxn.MyTag, transferRxn);
         }
 
-        public Tag CreateTransferReaction(string name, Tag specieTag, Tag origin, Tag destination)
+        public Tag CreateTransferReaction(string name, Tag specieTag, Tag origin, Tag destination, double transferRate)
         {
-            CompartmentTransferReaction transRxn = new CompartmentTransferReaction(name, specieTag, origin, destination);
+            TransferReaction transRxn = new TransferReaction(name, specieTag, origin, destination, new RateParameter(name+"_transfer_rate", transferRate));
             AddTransferReactionEntry(transRxn);
             return transRxn.MyTag;
-
         }
+
+
         
         
     }

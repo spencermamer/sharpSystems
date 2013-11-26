@@ -20,11 +20,8 @@ namespace sharpSystems
             sys.PlaceSpecie(A, memb, 10);
             sys.PlaceSpecie(B, cell, 5);
 
-            var rxn1 = (CompartmentTransferReaction)sys.CreateTransferReaction("A move", A, cell, memb).TaggedComponent;
-            while (rxn1.OriginHasEnoughSpecie())
-            {
-                rxn1.FireReaction();
-            }
+            var rxn1 = (TransferReaction)sys.CreateTransferReaction("A move", A, cell, memb).TaggedComponent;
+           
         }
     }
 }

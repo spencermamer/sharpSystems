@@ -5,7 +5,7 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class Reaction : AbstractReaction, IReaction
+    public class Reaction : AbstractReaction
     {
        
 

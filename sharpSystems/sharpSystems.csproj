@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="AbstractParameter.cs" />
     <Compile Include="Compartment.cs" />
-    <Compile Include="CompartmentTransferReaction.cs" />
+    <Compile Include="TransferReaction.cs" />
     <Compile Include="Component.cs" />
     <Compile Include="GenericDoubleParameter.cs" />
     <Compile Include="IReaction.cs" />
@@ -58,7 +58,6 @@
     <Compile Include="ReactionRole.cs" />
     <Compile Include="Reagent.cs" />
     <Compile Include="Specie.cs" />
-    <Compile Include="SpecieTransfer.cs" />
     <Compile Include="Tag.cs" />
     <Compile Include="VolumeParameter.cs" />
   </ItemGroup>
