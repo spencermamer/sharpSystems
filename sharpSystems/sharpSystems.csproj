@@ -44,22 +44,24 @@
     <Compile Include="BaseCompartment.cs" />
     <Compile Include="Compartment.cs" />
     <Compile Include="ComponentType.cs" />
+    <Compile Include="IReaction.cs" />
     <Compile Include="Model.cs" />
-    <Compile Include="Modeller.cs" />
+    <Compile Include="Modeler.cs" />
+    <Compile Include="Parameter.cs" />
+    <Compile Include="ParameterBase.cs" />
     <Compile Include="Reaction.cs" />
+    <Compile Include="ReactionBase.cs" />
     <Compile Include="SpecieBase.cs" />
     <Compile Include="Component.cs" />
-    <Compile Include="IReaction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProtoSpecie.cs" />
-    <Compile Include="ReactionRole.cs" />
-    <Compile Include="Reagent.cs" />
     <Compile Include="Specie.cs" />
+    <Compile Include="SpecieTransferReaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="GeneralClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

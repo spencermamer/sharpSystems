@@ -5,9 +5,10 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public interface IReaction
+    public interface IReactionFactory
     {
-        void FireReaction();
-        bool IsValidReaction();
+        void AddReactant(Specie specie, int stoich = 1);
+        void AddProduct(Specie specie, int stoich = 1);
+
     }
 }

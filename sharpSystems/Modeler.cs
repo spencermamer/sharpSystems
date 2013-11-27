@@ -1,26 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace sharpSystems
 {
-    public class Modeller
+    public class Modeler
     {
 
         private List<Specie> species;
         private List<Reaction> reactions;
         private List<Compartment> compartments;
         private List<ProtoSpecie> protospecies;
+
         private Dictionary<string, Compartment> compartmentMap;
         private Dictionary<string, ProtoSpecie> protospecieMap;
-        public ProtoSpecie[] ProtoSpecieArray { get { return protospecies.ToArray<ProtoSpecie>(); } }
-        public Specie[] SpecieArray { get { return species.ToArray<Specie>(); } }
-        public Reaction[] ReactionArray { get { return reactions.ToArray<Reaction>();}}
-        public Compartment[] CompartmentArray { get { return compartments.ToArray<Compartment>(); } } 
+
+        public ProtoSpecie[] ProtoSpecieArray { get { return protospecies.ToArray(); } }
+        public Specie[] SpecieArray { get { return species.ToArray(); } }
+        public Reaction[] ReactionArray { get { return reactions.ToArray();}}
+        public Compartment[] CompartmentArray { get { return compartments.ToArray(); } } 
 
 
-        public Modeller() 
+        public Modeler() 
         {
             // Initialize the various collections used to store and map various components
             this.species = new List<Specie>();

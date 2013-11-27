@@ -5,7 +5,8 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public enum ReactionRole
-    { Reactant, Product
+    public class ParameterBase : Component
+    {
+        public ParameterBase(string name) : base(name) { }
     }
 }
