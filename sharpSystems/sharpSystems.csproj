@@ -49,10 +49,10 @@
     <Compile Include="IParameter.cs" />
     <Compile Include="Modeller.cs" />
     <Compile Include="ParameterBase.cs" />
+    <Compile Include="ReactionBase.cs" />
     <Compile Include="SpecieBase.cs" />
     <Compile Include="TransferReaction.cs" />
     <Compile Include="Component.cs" />
-    <Compile Include="GenericDoubleParameter.cs" />
     <Compile Include="IReaction.cs" />
     <Compile Include="MassTransferRateLaw.cs" />
     <Compile Include="Program.cs" />
