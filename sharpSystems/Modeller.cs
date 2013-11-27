@@ -12,7 +12,7 @@ namespace sharpSystems
         private List<Reaction> reactions;
         private List<Compartment> compartments;
 
-        private Dictionary<Tag, ProtoSpecie> protospeciesMap;
+        private Dictionary<string, ProtoSpecie> protospeciesMap;
         private Dictionary<Tag, Component> componentsMap;
         
         public Modeller() 
@@ -20,21 +20,21 @@ namespace sharpSystems
             // Initialize the various collections used to store and map various components
             this.species = new List<Specie>();
             this.reactions = new List<Reaction>();
-            this.protospeciesMap = new Dictionary<Tag, ProtoSpecie>();
+            this.protospeciesMap = new Dictionary<string, ProtoSpecie>();
         }
 
         /// <summary>Returns, if it exists, a ProtoSpecie mapped with a given tag</summary>
         /// <param name="protoTag">Tag assigned to desired ProtoSpecie instance</param>
         /// <returns>ProtoSpecie instance</returns>
-        private ProtoSpecie GetPrototype(Tag protoTag)
+        private ProtoSpecie GetPrototype(String name)
         {
-            return protospeciesMap[protoTag];
+            return protospeciesMap[name];
         }
 
         // Enters ProtoSpecie into dictionary, using its MyTag as the lookup key.
         private void AddProtoSpecie(ProtoSpecie proto)
         {
-            protospeciesMap.Add(proto.MyTag, proto);
+            protospeciesMap.Add(proto.Name, proto);
         }
 
         // Adds Specie to species list
@@ -56,17 +56,17 @@ namespace sharpSystems
         }
        
         // Creates a new ProtoSpecie within the model, and returns an identification tag.
-        public Tag DefineNewSpecie(string name)
+        public string DefineNewSpecie(string name)
         {
             ProtoSpecie newProto = ProtoSpecieFactory(name);
             AddProtoSpecie(newProto);
-            return newProto.MyTag;
+            return newProto.Name;
         }
 
         // A specie instance based off of a protospecie is created in given compartment
-        public Specie PlaceSpecie(Tag protoTag, Compartment place, int quantity = 0)
+        public Specie PlaceSpecie(string name, Compartment place, int quantity = 0)
         {
-            ProtoSpecie proto = GetPrototype(protoTag);
+            ProtoSpecie proto = GetPrototype(name);
             Specie newSpecie = SpecieFactory(proto, place, quantity);
             AddSpecieEntry(newSpecie);
             return newSpecie;
