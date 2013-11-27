@@ -5,30 +5,12 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class Reaction : AbstractReaction
+    public class Reaction : Component
     {
-       
-
-        public Reaction(string name) : base(name)
-        {
-            
-        }
-
-        public void FireReaction()
+        public Reaction(string name)
+            : base(name)
         {
 
-        }
-
-        public Specie[] GetInvolvedSpecies()
-        {
-            return species.ToArray<Specie>();
-        }
-
-        
-
-        public bool IsValidReaction()
-        {
-            return false;
         }
 
     }

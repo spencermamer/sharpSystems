@@ -14,7 +14,7 @@ namespace sharpSystems
             base.Type = ComponentType.Specie;
         }
 
-        public SpecieBase(SpecieBase proto) : base(proto)
+        public SpecieBase(SpecieBase proto) : base(proto.Name)
         {
             base.Type = ComponentType.Specie;
         }

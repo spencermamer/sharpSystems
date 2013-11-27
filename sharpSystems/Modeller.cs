@@ -11,8 +11,10 @@ namespace sharpSystems
         private List<Specie> species;
         private List<Reaction> reactions;
         private List<Compartment> compartments;
+        private List<ProtoSpecie> protospecies;
         private Dictionary<string, Compartment> compartmentMap;
-        private Dictionary<string, ProtoSpecie> protospeciesMap;
+        private Dictionary<string, ProtoSpecie> protospecieMap;
+        public ProtoSpecie[] ProtoSpecieArray { get { return protospecies.ToArray<ProtoSpecie>(); } }
         public Specie[] SpecieArray { get { return species.ToArray<Specie>(); } }
         public Reaction[] ReactionArray { get { return reactions.ToArray<Reaction>();}}
         public Compartment[] CompartmentArray { get { return compartments.ToArray<Compartment>(); } } 
@@ -23,7 +25,7 @@ namespace sharpSystems
             // Initialize the various collections used to store and map various components
             this.species = new List<Specie>();
             this.reactions = new List<Reaction>();
-            this.protospeciesMap = new Dictionary<string, ProtoSpecie>();
+            this.protospecieMap = new Dictionary<string, ProtoSpecie>();
             this.compartmentMap = new Dictionary<string, Compartment>();
             this.compartments = new List<Compartment>();
         }
@@ -33,14 +35,15 @@ namespace sharpSystems
         /// <returns>ProtoSpecie instance</returns>
         private ProtoSpecie GetPrototype(String name)
         {
-            return protospeciesMap[name];
+            return protospecieMap[name];
         }
 
         
         // Enters ProtoSpecie into dictionary, using its MyTag as the lookup key.
         private void AddProtoSpecie(ProtoSpecie proto)
         {
-            protospeciesMap.Add(proto.Name, proto);
+            protospecieMap.Add(proto.Name, proto);
+            protospecies.Add(proto);
         }
 
         // Adds Specie to species list
@@ -93,6 +96,11 @@ namespace sharpSystems
         public Compartment CreateCompartment(string name, Compartment parent, double volume)
         {
             return AddCompartmentEntry(CompartmentFactory(name, parent, volume));
+        }
+
+        public Model MakeModel()
+        {
+            return new Model(protospecies: ProtoSpecieArray, compartments: CompartmentArray, reactions: ReactionArray, species: SpecieArray);
         }
 
 

@@ -11,9 +11,8 @@ namespace sharpSystems
         public double Volume
         {
             get { return volume; }
-            set { volume = value; }
+            private set { volume = value; }
         }
-
         protected Dictionary<string, Specie> species;
         
         private Compartment parent;
@@ -26,7 +25,7 @@ namespace sharpSystems
 
         // BEGIN CONSTRUCTOR DECLARATIONS
 
-        public Compartment(string name, Compartment parent, double volume) : base(name)
+        public Compartment(string name, Compartment parent, double volume = 1.0) : base(name)
         {
             this.species = new Dictionary<string, Specie>();
             this.parent = parent;
@@ -37,10 +36,12 @@ namespace sharpSystems
         {
 
         }
+
         public Compartment(string name, double volume) : this(name, null, volume)
         {
             
         }
+
         public Compartment(string name) : this(name, null, 0.0) { }
 
         // BEGIN METHOD DECLARATIONS
