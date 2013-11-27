@@ -9,35 +9,23 @@ namespace sharpSystems
     {
         protected readonly static int _default_stoich = 1;
 
-        protected RateParameter rateParameter;
-        public RateParameter RateParameter
-        {
-            get { return rateParameter; }
-            set { rateParameter = value; }
-        }
-        public double RateValue
-        {
-            get { return rateParameter.Value; }
-        }
+     
+       
 
         protected List<Specie> species;
         protected List<Reagent> reactants;
         protected List<Reagent> products;
 
-        public AbstractReaction(string name, RateParameter rateParam)
+        public AbstractReaction(string name)
             : base(name)
         {
             base.Type = ComponentType.Reaction;
             this.species = new List<Specie>();
             this.reactants = new List<Reagent>();
             this.products = new List<Reagent>();
-            this.rateParameter = rateParam;
+           
         }
 
-        public AbstractReaction(string name) : this(name, null)
-        {
-            
-        }
 
 
         protected void AddSpecieEntry(Reagent reagent)

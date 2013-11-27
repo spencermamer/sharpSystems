@@ -14,17 +14,10 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="sharpSystems.Tag" Collapsed="true">
-    <Position X="10.75" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAQAAAAAAAAAAAAAACQAAAAIAAAABAAA=</HashCode>
-      <FileName>Tag.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="sharpSystems.Component" Collapsed="true">
     <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAQABAAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Component.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,7 +45,7 @@
   <Class Name="sharpSystems.AbstractReaction" Collapsed="true">
     <Position X="2.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAQAAACEAAAQEBAAAAAAAAAAAAABACABIA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAACAAAAQEBAAAAAAAAAAAAABACABAA=</HashCode>
       <FileName>AbstractReaction.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -66,7 +59,7 @@
   <Class Name="sharpSystems.TransferReaction" Collapsed="true">
     <Position X="1.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CQAAAAgAAAEBAAAAAEAAAQAAAAAAAAAAAAQABiAAgAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TransferReaction.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -87,11 +80,11 @@
   <Class Name="sharpSystems.Modeller" Collapsed="true">
     <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAAgAAAAgAAEAAAAAAEBAAAABAAAgAAEAAAAAJAA=</HashCode>
+      <HashCode>AAIAAAgAAAAgQAEAEAAAAEBAAAABAAAgAAEAAAAAJgA=</HashCode>
       <FileName>Modeller.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="sharpSystems.ReactionBase">
+  <Class Name="sharpSystems.ReactionBase" Collapsed="true">
     <Position X="4.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

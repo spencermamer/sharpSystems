@@ -14,7 +14,7 @@ namespace sharpSystems
             set { volume = value; }
         }
 
-        protected Dictionary<Tag, Specie> species;
+        protected Dictionary<string, Specie> species;
         
         private Compartment parent;
         public Compartment Parent
@@ -28,7 +28,7 @@ namespace sharpSystems
 
         public Compartment(string name, Compartment parent, double volume) : base(name)
         {
-            this.species = new Dictionary<Tag, Specie>();
+            this.species = new Dictionary<string, Specie>();
             this.parent = parent;
             this.volume = volume;
         }
@@ -47,15 +47,15 @@ namespace sharpSystems
 
         private void AddSpeciesEntry(Specie specie)
         {
-            if(!HasSpecie(specie.MyTag) )
+            if(!HasSpecie(specie.Name) )
             {
-                species.Add(specie.MyTag, specie);
+                species.Add(specie.Name, specie);
             }
         }
         
         public bool AddSpecie(Specie specie)
         {
-            if (!HasSpecie(specie.MyTag))
+            if (!HasSpecie(specie.Name))
             {
                 AddSpeciesEntry(specie);
                 return true;
@@ -71,23 +71,23 @@ namespace sharpSystems
         public void PrintContents()
         {
             Console.WriteLine(Name + "'s contents:");
-            foreach (KeyValuePair<Tag, Specie> pair in species)
+            foreach (KeyValuePair<string, Specie> pair in species)
             {
                 Console.WriteLine("\t"+pair.Value.Name + " ("+pair.Value.Quantity+")");
 
             }
         }
 
-        public bool HasSpecie(Tag specieTag)
+        public bool HasSpecie(string specieName)
         {
-            return species.ContainsKey(specieTag);
+            return species.ContainsKey(specieName);
         }
 
-        public Specie GetSpecie(Tag specieTag)
+        public Specie GetSpecie(string specieName)
         {
-            if (HasSpecie(specieTag))
+            if (HasSpecie(specieName))
             {
-                return species[specieTag];
+                return species[specieName];
             }
             else
             {

@@ -5,7 +5,13 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class ReactionBase
+    public class ReactionBase : Component
     {
+        public ReactionBase(string name)
+            : base(name)
+        {
+
+        }
+
     }
 }

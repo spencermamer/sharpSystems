@@ -11,16 +11,21 @@ namespace sharpSystems
         private List<Specie> species;
         private List<Reaction> reactions;
         private List<Compartment> compartments;
-
+        private Dictionary<string, Compartment> compartmentMap;
         private Dictionary<string, ProtoSpecie> protospeciesMap;
-        private Dictionary<Tag, Component> componentsMap;
-        
+        public Specie[] SpecieArray { get { return species.ToArray<Specie>(); } }
+        public Reaction[] ReactionArray { get { return reactions.ToArray<Reaction>();}}
+        public Compartment[] CompartmentArray { get { return compartments.ToArray<Compartment>(); } } 
+
+
         public Modeller() 
         {
             // Initialize the various collections used to store and map various components
             this.species = new List<Specie>();
             this.reactions = new List<Reaction>();
             this.protospeciesMap = new Dictionary<string, ProtoSpecie>();
+            this.compartmentMap = new Dictionary<string, Compartment>();
+            this.compartments = new List<Compartment>();
         }
 
         /// <summary>Returns, if it exists, a ProtoSpecie mapped with a given tag</summary>
@@ -31,6 +36,7 @@ namespace sharpSystems
             return protospeciesMap[name];
         }
 
+        
         // Enters ProtoSpecie into dictionary, using its MyTag as the lookup key.
         private void AddProtoSpecie(ProtoSpecie proto)
         {
@@ -71,6 +77,24 @@ namespace sharpSystems
             AddSpecieEntry(newSpecie);
             return newSpecie;
         }
+
+        private Compartment CompartmentFactory(string name, Compartment parent, double volume) 
+        {
+            return new Compartment(name, parent, volume);
+        }
+
+        private Compartment AddCompartmentEntry(Compartment comp)
+        {
+            compartments.Add(comp);
+            compartmentMap.Add(comp.Name, comp);
+            return comp;
+        }
+
+        public Compartment CreateCompartment(string name, Compartment parent, double volume)
+        {
+            return AddCompartmentEntry(CompartmentFactory(name, parent, volume));
+        }
+
 
     }
 }

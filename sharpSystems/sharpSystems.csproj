@@ -60,7 +60,6 @@
     <Compile Include="ReactionRole.cs" />
     <Compile Include="Reagent.cs" />
     <Compile Include="Specie.cs" />
-    <Compile Include="Tag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

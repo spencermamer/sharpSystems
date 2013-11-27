@@ -11,6 +11,8 @@ namespace sharpSystems
         static void Main(string[] args)
         {
             Modeller mdlr = new Modeller();
+            Console.WriteLine(mdlr.DefineNewSpecie("A"));
+
         }
     }
 }
