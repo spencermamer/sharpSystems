@@ -7,17 +7,17 @@ namespace sharpSystems
 {
     public class SpecieBase : Component
     {
-        public static ComponentType componentType = ComponentType.Specie;
-
+        
         public SpecieBase(string name)
             : base(name)
         {
+            base.type = ComponentType.Specie;
 
         }
 
         public SpecieBase(SpecieBase proto) : base(proto)
         {
-
+            base.type = ComponentType.Specie;
         }
     }
 }

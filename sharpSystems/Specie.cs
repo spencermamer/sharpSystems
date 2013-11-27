@@ -14,7 +14,6 @@ namespace sharpSystems
             get { return location; }
             protected set { location = value; }
         }
-        
         protected int quantity;
         public int Quantity
         {
@@ -53,7 +52,6 @@ namespace sharpSystems
         {
             this.location = Location;
 
-
             if (quantity >= 0) 
             { 
                 this.quantity = quantity; 
@@ -74,6 +72,7 @@ namespace sharpSystems
                 Quantity += delta;
             }
         }
+
         
     
     }

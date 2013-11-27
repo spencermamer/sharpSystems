@@ -5,7 +5,7 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class Compartment : Component
+    public class Compartment : BaseCompartment
     {
         private double volume;
         public double Volume

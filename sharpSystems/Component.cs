@@ -7,7 +7,8 @@ namespace sharpSystems
 {
     public class Component
     {
-        private string name;
+        protected ComponentType type;
+        
         public static int componentCount;
         private Tag myTag;
         public Tag MyTag
@@ -15,6 +16,7 @@ namespace sharpSystems
             get { return myTag; }
             protected set { myTag = value; }
         }
+        private string name;
 
         public string Name
         {

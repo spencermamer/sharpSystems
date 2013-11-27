@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractParameter.cs" />
+    <Compile Include="BaseCompartment.cs" />
     <Compile Include="Compartment.cs" />
     <Compile Include="ComponentType.cs" />
+    <Compile Include="Modeller.cs" />
     <Compile Include="SpecieBase.cs" />
     <Compile Include="TransferReaction.cs" />
     <Compile Include="Component.cs" />
