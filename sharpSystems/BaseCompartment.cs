@@ -5,13 +5,13 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class BaseCompartment : Component
+    public class CompartmentBase : Component
     {
         
-        public BaseCompartment(string name)
+        public CompartmentBase(string name)
             : base(name)
         {
-            base.type = ComponentType.Compartment;
+            base.Type = ComponentType.Compartment;
         }
     }
 }

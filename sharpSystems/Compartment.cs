@@ -5,7 +5,7 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class Compartment : BaseCompartment
+    public class Compartment : CompartmentBase
     {
         private double volume;
         public double Volume
@@ -22,18 +22,21 @@ namespace sharpSystems
             get { return parent; }
             set { parent = value; }
         }
-      
+        
 
-        // BEGIN CONSTRUCTO DECLARATIONS
+        // BEGIN CONSTRUCTOR DECLARATIONS
 
         public Compartment(string name, Compartment parent, double volume) : base(name)
         {
             this.species = new Dictionary<Tag, Specie>();
             this.parent = parent;
             this.volume = volume;
-           
         }
-        public Compartment(string name, Compartment parent) : this(name, parent, 0.0) { }
+
+        public Compartment(string name, Compartment parent) : this(name, parent, 0.0) 
+        {
+
+        }
         public Compartment(string name, double volume) : this(name, null, volume)
         {
             
@@ -50,25 +53,20 @@ namespace sharpSystems
             }
         }
         
-        public Tag AddSpecie(ProtoSpecie proto, int quantity) 
+        public bool AddSpecie(Specie specie)
         {
-            if (!HasSpecie(proto.MyTag))
+            if (!HasSpecie(specie.MyTag))
             {
-                Specie specie = new Specie(proto, this, quantity);
                 AddSpeciesEntry(specie);
-                return specie.MyTag;
+                return true;
             }
             else
             {
-                Console.WriteLine("Error: Compartment already contains specie {1}", proto.Name);
-                return null;
+                Console.WriteLine("Error: compartment already contains {1}. ",specie.Name);
+                return false;
             }
         }
-         
-        public void AddSpecie(Specie specie)
-        {
-            AddSpeciesEntry(specie);
-        }
+
 
         public void PrintContents()
         {

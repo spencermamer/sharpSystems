@@ -8,36 +8,16 @@ namespace sharpSystems
 {
     public class ProtoSpecie : SpecieBase
     {
-        private bool isInUse = false;
-        public bool IsInUse
+        private bool isUsed = false;
+
+        public bool IsUsed
         {
-            get { return isInUse; }
-            private set { isInUse = value; }
+            get { return isUsed; }
+            set { isUsed = value; }
         }
 
-        private List<Compartment> specieLocations = new List<Compartment>();
+        public ProtoSpecie(string name) : base(name) {}
 
-    
-        public ProtoSpecie(string name) : base(name)
-        {
-        }
-
-
-
-        public void AddLocationUseEntry(Compartment comp)
-        {
-            specieLocations.Add(comp);
-            isInUse = true;
-        }
-
-        public void PrintWhereInUse()
-        {
-            Console.WriteLine("Specie " + this.Name + " has been placed in the following compartments:");
-            foreach (Compartment comp in specieLocations)
-            {
-                Console.WriteLine("\t" + comp.Name);
-            }
-        }
 
     }
 }

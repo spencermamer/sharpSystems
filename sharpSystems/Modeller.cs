@@ -10,6 +10,7 @@ namespace sharpSystems
 
         private List<Specie> species;
         private List<Reaction> reactions;
+        private List<Compartment> compartments;
 
         private Dictionary<Tag, ProtoSpecie> protospeciesMap;
         private Dictionary<Tag, Component> componentsMap;
@@ -22,30 +23,53 @@ namespace sharpSystems
             this.protospeciesMap = new Dictionary<Tag, ProtoSpecie>();
         }
 
-        private Tag AddProtoSpecie(ProtoSpecie proto)
+        /// <summary>Returns, if it exists, a ProtoSpecie mapped with a given tag</summary>
+        /// <param name="protoTag">Tag assigned to desired ProtoSpecie instance</param>
+        /// <returns>ProtoSpecie instance</returns>
+        private ProtoSpecie GetPrototype(Tag protoTag)
         {
-            protospeciesMap.Add(proto.MyTag, proto);
-            return proto.MyTag;
+            return protospeciesMap[protoTag];
         }
 
-        private void AddSpecie(Specie specie)
+        // Enters ProtoSpecie into dictionary, using its MyTag as the lookup key.
+        private void AddProtoSpecie(ProtoSpecie proto)
+        {
+            protospeciesMap.Add(proto.MyTag, proto);
+        }
+
+        // Adds Specie to species list
+        private void AddSpecieEntry(Specie specie)
         {
             species.Add(specie);
         }
 
-        public Tag DefineSpecie(string name)
+        // Returns a species object from given prototype, located in given compartment, with given quantity of molecules
+        private Specie SpecieFactory(ProtoSpecie proto, Compartment place, int quantity)
         {
-            return AddProtoSpecie(new ProtoSpecie(name));
+            return new Specie(proto, place, quantity);
         }
 
-        private ProtoSpecie GetPrototype(Tag specieTag) 
+        // Returns a new ProtoSpecie instance with given name.
+        private ProtoSpecie ProtoSpecieFactory(string name)
         {
-            return protospeciesMap[specieTag];
+            return new ProtoSpecie(name);
+        }
+       
+        // Creates a new ProtoSpecie within the model, and returns an identification tag.
+        public Tag DefineNewSpecie(string name)
+        {
+            ProtoSpecie newProto = ProtoSpecieFactory(name);
+            AddProtoSpecie(newProto);
+            return newProto.MyTag;
         }
 
-        public Specie PlaceSpecie(Tag specieTag, Compartment place, int quantity = 0)
+        // A specie instance based off of a protospecie is created in given compartment
+        public Specie PlaceSpecie(Tag protoTag, Compartment place, int quantity = 0)
         {
-            return new Specie(GetPrototype(specieTag), place, quantity);
+            ProtoSpecie proto = GetPrototype(protoTag);
+            Specie newSpecie = SpecieFactory(proto, place, quantity);
+            AddSpecieEntry(newSpecie);
+            return newSpecie;
         }
 
     }

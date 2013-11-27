@@ -27,7 +27,7 @@ namespace sharpSystems
         public AbstractReaction(string name, RateParameter rateParam)
             : base(name)
         {
-            base.type = ComponentType.Reaction;
+            base.Type = ComponentType.Reaction;
             this.species = new List<Specie>();
             this.reactants = new List<Reagent>();
             this.products = new List<Reagent>();

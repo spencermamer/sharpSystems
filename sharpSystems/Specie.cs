@@ -60,7 +60,9 @@ namespace sharpSystems
             { 
                 this.quantity = 0; 
             }
+
             this.location.AddSpecie(this);
+            proto.IsUsed = true;
         }
 
         // BEGIN METHOD DECLARATIONS

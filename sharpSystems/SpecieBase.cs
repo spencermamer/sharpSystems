@@ -11,13 +11,12 @@ namespace sharpSystems
         public SpecieBase(string name)
             : base(name)
         {
-            base.type = ComponentType.Specie;
-
+            base.Type = ComponentType.Specie;
         }
 
         public SpecieBase(SpecieBase proto) : base(proto)
         {
-            base.type = ComponentType.Specie;
+            base.Type = ComponentType.Specie;
         }
     }
 }
