@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sharpSystems
 {
-    public class ProtoSpecie : Component
+    public class ProtoSpecie : SpecieBase
     {
         private bool isInUse = false;
         public bool IsInUse
@@ -21,6 +21,7 @@ namespace sharpSystems
         public ProtoSpecie(string name) : base(name)
         {
         }
+
 
 
         public void AddLocationUseEntry(Compartment comp)

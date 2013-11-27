@@ -5,7 +5,7 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class Specie : Component
+    public class Specie : SpecieBase
     {
         
         protected Compartment location;
@@ -53,6 +53,7 @@ namespace sharpSystems
         {
             this.location = Location;
 
+
             if (quantity >= 0) 
             { 
                 this.quantity = quantity; 
@@ -61,7 +62,6 @@ namespace sharpSystems
             { 
                 this.quantity = 0; 
             }
-
             this.location.AddSpecie(this);
         }
 

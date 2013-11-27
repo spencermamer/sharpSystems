@@ -13,6 +13,7 @@ namespace sharpSystems
             get { return volume; }
             set { volume = value; }
         }
+
         protected Dictionary<Tag, Specie> species;
         
         private Compartment parent;
@@ -27,7 +28,6 @@ namespace sharpSystems
 
         public Compartment(string name, Compartment parent, double volume) : base(name)
         {
-            this.myTag = new Tag(this, "COMPARTMENT_" + name);
             this.species = new Dictionary<Tag, Specie>();
             this.parent = parent;
             this.volume = volume;

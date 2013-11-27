@@ -33,6 +33,7 @@ namespace sharpSystems
         {
             this.name = baseComponent.Name;
             this.myTag = baseComponent.MyTag;
+            ++componentCount;
         }
 
     }
