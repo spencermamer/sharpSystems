@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="sharpSystems.ProtoSpecie" Collapsed="true">
-    <Position X="8" Y="5.25" Width="1.5" />
+    <Position X="8.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>ProtoSpecie.cs</FileName>
@@ -29,7 +29,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="sharpSystems.Specie" Collapsed="true">
-    <Position X="10.5" Y="5.25" Width="1.5" />
+    <Position X="10" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAACAAAAAACAQAAAgAAAAAA=</HashCode>
       <FileName>Specie.cs</FileName>
@@ -70,34 +70,6 @@
       <FileName>TransferReaction.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="sharpSystems.AbstractParameter" Collapsed="true">
-    <Position X="14.5" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>AbstractParameter.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="sharpSystems.RateParameter" Collapsed="true">
-    <Position X="12.75" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAEAAIAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
-      <FileName>RateParameter.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="sharpSystems.VolumeParameter" Collapsed="true">
-    <Position X="14.5" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
-      <FileName>VolumeParameter.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="sharpSystems.GenericDoubleParameter" Collapsed="true">
-    <Position X="16.25" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
-      <FileName>GenericDoubleParameter.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="sharpSystems.SpecieBase" Collapsed="true">
     <Position X="9.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
@@ -117,6 +89,34 @@
     <TypeIdentifier>
       <HashCode>AEAAAAgAAAAgAAEAAAAAAEBAAAABAAAgAAEAAAAAJAA=</HashCode>
       <FileName>Modeller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.ParameterBase" Collapsed="true">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAIAAAAAgAAAAAAA=</HashCode>
+      <FileName>ParameterBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.GeneralDoubleParameter" Collapsed="true">
+    <Position X="14.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAABgAAAAAAA=</HashCode>
+      <FileName>GeneralDoubleParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.VolumeParameter" Collapsed="true">
+    <Position X="13" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAIAEAAAIAAAAAAAAAIAAAAAgAAAAAAA=</HashCode>
+      <FileName>VolumeParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.RateParameter">
+    <Position X="13.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAAA=</HashCode>
+      <FileName>RateParameter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="sharpSystems.Reagent" Collapsed="true">

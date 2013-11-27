@@ -5,23 +5,24 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class RateParameter : AbstractParameter
+    public class RateParameter : ParameterBase
     {
-        private double rate;
-        public double Value
+        public override bool IsTimeDependent
         {
-            get { return rate; }
-             set { rate = value; }
-        }
-        public RateParameter(string name, double rxnRate)
-            : base(name)
-        {
-            this.rate = rxnRate;
+            get { throw new NotImplementedException(); }
         }
 
-        public override double GetValue()
+
+        private double rateValue;
+        public override double Value
         {
-            return rate;
+            get { return rateValue; }
+            protected set { rateValue = value; }
+        }
+
+        public RateParameter(string name, double rateValue) : base(name) 
+        {
+            this.rateValue = rateValue;
         }
     }
 }

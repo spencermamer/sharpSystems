@@ -5,30 +5,36 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class VolumeParameter : AbstractParameter
+    public class VolumeParameter : ParameterBase
     {
-        private double volume;
-
-        public VolumeParameter(string name, double volume) : base(name) 
+        private bool isTimeDependent;
+        public override bool IsTimeDependent
         {
-            if (volume >= 0)
-            {
-                this.volume = volume;
-            }
-            else
-            {
-                this.volume = 0.0;
-                Console.WriteLine("ERROR: Volume cannot be negative");
-            }
+            get { return isTimeDependent; }
+            protected set { isTimeDependent = value; }
+        }
+        private double volumeValue;
+        public override double Value
+        {
+            get { return volumeValue; }
+            protected set { volumeValue = value; }
         }
 
-        /// <summary>
-        /// Access the VolumeParameter's numerical value
-        /// </summary>
-        /// <returns>double value of volume in Liters</returns>
-        public override double GetValue()
+        public VolumeParameter(string name, double volumeValue)
+            : base(name)
         {
-            return volume;
+            this.volumeValue = volumeValue;
+        }
+
+        public void ChangeVolume(double newVolume)
+        {
+            volumeValue = newVolume;
+        }
+
+        public override string ToString()
+        {
+            return "Volume_" + Name + ": " + Value + " L\n";
+            
         }
     }
 }
