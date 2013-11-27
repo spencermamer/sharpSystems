@@ -44,6 +44,7 @@
     <Compile Include="BaseCompartment.cs" />
     <Compile Include="Compartment.cs" />
     <Compile Include="ComponentType.cs" />
+    <Compile Include="GillespieDirectSimulation.cs" />
     <Compile Include="IReaction.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Modeler.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="ParameterBase.cs" />
     <Compile Include="Reaction.cs" />
     <Compile Include="ReactionBase.cs" />
+    <Compile Include="Simulation.cs" />
     <Compile Include="SpecieBase.cs" />
     <Compile Include="Component.cs" />
     <Compile Include="Program.cs" />
