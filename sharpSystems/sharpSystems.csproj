@@ -45,7 +45,10 @@
     <Compile Include="BaseCompartment.cs" />
     <Compile Include="Compartment.cs" />
     <Compile Include="ComponentType.cs" />
+    <Compile Include="GeneralDoubleParameter.cs" />
+    <Compile Include="IParameter.cs" />
     <Compile Include="Modeller.cs" />
+    <Compile Include="ParameterBase.cs" />
     <Compile Include="SpecieBase.cs" />
     <Compile Include="TransferReaction.cs" />
     <Compile Include="Component.cs" />
