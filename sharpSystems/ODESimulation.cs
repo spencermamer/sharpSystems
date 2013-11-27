@@ -5,8 +5,7 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class GillespieDirectSimulation : StochasticSimulation
+    public class ODESimulation : Simulation
     {
-
     }
 }

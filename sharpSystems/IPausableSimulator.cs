@@ -5,8 +5,8 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class GillespieDirectSimulation : StochasticSimulation
+    public interface IPausable
     {
-
+        void Pause();
     }
 }

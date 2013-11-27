@@ -5,8 +5,9 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class GillespieDirectSimulation : StochasticSimulation
+    public sealed class Constant : Component
     {
+        public const double AvogadroNumber = 6.02214129E23;
 
     }
 }

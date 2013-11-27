@@ -5,6 +5,6 @@ using System.Text;
 namespace sharpSystems
 {
     public enum ComponentType
-    { Specie, Compartment, Parameter, Reaction
+    { Specie, Compartment, Parameter, Reaction, Constant
     }
 }

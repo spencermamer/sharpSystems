@@ -41,18 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseCompartment.cs" />
+    <Compile Include="CompartmentBase.cs" />
     <Compile Include="Compartment.cs" />
     <Compile Include="ComponentType.cs" />
+    <Compile Include="Constant.cs" />
     <Compile Include="GillespieDirectSimulation.cs" />
+    <Compile Include="IPausableSimulator.cs" />
     <Compile Include="IReaction.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Modeler.cs" />
+    <Compile Include="ODESimulation.cs" />
     <Compile Include="Parameter.cs" />
     <Compile Include="ParameterBase.cs" />
     <Compile Include="Reaction.cs" />
     <Compile Include="ReactionBase.cs" />
     <Compile Include="Simulation.cs" />
+    <Compile Include="SimulationController.cs" />
     <Compile Include="SpecieBase.cs" />
     <Compile Include="Component.cs" />
     <Compile Include="Program.cs" />
@@ -60,6 +64,7 @@
     <Compile Include="ProtoSpecie.cs" />
     <Compile Include="Specie.cs" />
     <Compile Include="SpecieTransferReaction.cs" />
+    <Compile Include="StochasticSimulation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

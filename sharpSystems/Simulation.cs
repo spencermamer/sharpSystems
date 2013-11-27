@@ -6,8 +6,17 @@ namespace sharpSystems
 {
     public abstract class Simulation
     {
-        abstract void initialize();
-        abstract void reset();
-        abstract void step();
+        public bool IsInitialized
+        {
+            set;
+            get;
+        }
+
+        // CONSTRUCTOR DECLARATION
+        
+
+        // METHOD DECLARATIONS
+        abstract void Initalize();
+        abstract void RunSimulation();
     }
 }
