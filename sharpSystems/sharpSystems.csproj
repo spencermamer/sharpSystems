@@ -44,19 +44,27 @@
     <Compile Include="CompartmentBase.cs" />
     <Compile Include="Compartment.cs" />
     <Compile Include="ComponentType.cs" />
+    <Compile Include="ConsoleReporter.cs" />
+    <Compile Include="DeterministicSimulator.cs" />
+    <Compile Include="FileReporter.cs" />
+    <Compile Include="GillespieStochasticSimulator.cs" />
+    <Compile Include="IController.cs" />
+    <Compile Include="IRecorder.cs" />
+    <Compile Include="ISimulator.cs" />
     <Compile Include="ModelWrapper.cs" />
-    <Compile Include="IReaction.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Modeler.cs" />
     <Compile Include="Parameter.cs" />
     <Compile Include="ParameterBase.cs" />
     <Compile Include="Reaction.cs" />
     <Compile Include="ReactionBase.cs" />
+    <Compile Include="ResultPrinter.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="ReactionWrapper.cs" />
     <Compile Include="Reagent.cs" />
-    <Compile Include="Simulation\Simulation.cs" />
-    <Compile Include="Simulation\SimulationController.cs" />
+    <Compile Include="SimulationController.cs" />
+    <Compile Include="Simulator.cs" />
+    <Compile Include="Controller.cs" />
     <Compile Include="StochasticReactionWrapper.cs" />
     <Compile Include="SpecieBase.cs" />
     <Compile Include="Component.cs" />
@@ -65,9 +73,11 @@
     <Compile Include="ProtoSpecie.cs" />
     <Compile Include="Specie.cs" />
     <Compile Include="SpecieTransferReaction.cs" />
+    <Compile Include="StochasticSimulator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="GeneralClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
