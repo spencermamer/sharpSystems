@@ -61,7 +61,7 @@ namespace sharpSystems
                 this.quantity = 0; 
             }
 
-            this.location.AddSpecie(this);
+            //this.location.AddSpecie();
             proto.IsUsed = true;
         }
 

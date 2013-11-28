@@ -16,7 +16,7 @@ namespace sharpSystems
         
 
         // METHOD DECLARATIONS
-        abstract void Initalize();
-        abstract void RunSimulation();
+        public abstract void Initalize();
+        public abstract void RunSimulation();
     }
 }

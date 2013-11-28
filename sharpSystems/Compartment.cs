@@ -24,7 +24,7 @@ namespace sharpSystems
 
         // BEGIN CONSTRUCTOR DECLARATIONS
 
-        public Compartment(string name, Compartment parent, double volume = 1.0) : base(name)
+        public Compartment(string name, Compartment parent, double volume) : base(name)
         {
             this.species = new Dictionary<string, Specie>();
             this.parent = parent;

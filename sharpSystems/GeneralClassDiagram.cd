@@ -70,7 +70,7 @@
   <Class Name="sharpSystems.Reaction" Collapsed="true">
     <Position X="5.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAQAAASEAAAAAAAAAAAAAABACAAAQ=</HashCode>
+      <HashCode>AAAAAAEAAAAAAACAAAAASEAAAAAAACAgAAAABACAAAA=</HashCode>
       <FileName>Reaction.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -103,22 +103,15 @@
       <FileName>SpecieTransferReaction.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="sharpSystems.GillespieDirectSimulation">
-    <Position X="18.25" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GillespieDirectSimulation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="sharpSystems.Simulation" Collapsed="true">
-    <Position X="17" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAhAAAAAA=</HashCode>
       <FileName>Simulation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="sharpSystems.Controller" Collapsed="true">
-    <Position X="15" Y="1.25" Width="2" />
+    <Position X="0.5" Y="6.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAgAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SimulationController.cs</FileName>
@@ -131,36 +124,22 @@
       <FileName>Constant.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="sharpSystems.ODESimulation">
-    <Position X="15" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ODESimulation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="sharpSystems.StochasticSimulation">
-    <Position X="18.25" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StochasticSimulation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="sharpSystems.StochasticReactionWrapper">
-    <Position X="21.75" Y="3" Width="1.5" />
+    <Position X="4" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAACAAAAAAAAAAAAA=</HashCode>
       <FileName>StochasticReactionWrapper.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="sharpSystems.ReactionWrapper">
-    <Position X="21.75" Y="1.5" Width="1.5" />
+  <Class Name="sharpSystems.ReactionWrapper" Collapsed="true">
+    <Position X="6.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAEAAAAAAEAAAABAAEAAAAAAACAAAAAAAAAAAAA=</HashCode>
       <FileName>ReactionWrapper.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="sharpSystems.Reagent">
-    <Position X="8.5" Y="5.5" Width="1.5" />
+  <Class Name="sharpSystems.Reagent" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAQAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAIAAEA=</HashCode>
       <FileName>Reagent.cs</FileName>
@@ -180,8 +159,8 @@
       <FileName>ComponentType.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="sharpSystems.Role">
-    <Position X="11.75" Y="2.75" Width="1.5" />
+  <Enum Name="sharpSystems.Role" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>Role.cs</FileName>

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace sharpSystems
@@ -9,16 +9,24 @@ namespace sharpSystems
     {
         protected Reagent[] reactants;
 
+        protected double propensity;
+        public double Propensity
+        {
+            get { return propensity; }
+        }
+
         protected double rateConst;
+       
 
         public ReactionWrapper(Reaction reaction)
         {
             this.reactants = reaction.ReactantArray;
-
+            this.rateConst = reaction.Rate;
         }
 
         public abstract double CalculatePropensity();
 
+       
 
 
     }

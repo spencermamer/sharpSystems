@@ -6,8 +6,8 @@ namespace sharpSystems
 {
     public abstract class Controller
     {
-        abstract void SendCancelRequest();
-        abstract void SendStopRequest();
-        abstract void GetStatus;
+        public abstract void SendCancelRequest();
+        public abstract void SendStopRequest();
+        public abstract void GetStatus();
     }
 }
