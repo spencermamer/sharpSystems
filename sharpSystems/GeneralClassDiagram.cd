@@ -85,7 +85,7 @@
   <Class Name="sharpSystems.ReactionBase" Collapsed="true">
     <Position X="5.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ReactionBase.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -107,21 +107,7 @@
     <Position X="0.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAhAAAAAA=</HashCode>
-      <FileName>Simulation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="sharpSystems.Controller" Collapsed="true">
-    <Position X="0.5" Y="6.75" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAgAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SimulationController.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="sharpSystems.Constant" Collapsed="true">
-    <Position X="3.75" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Constant.cs</FileName>
+      <FileName>Simulation\Simulation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="sharpSystems.StochasticReactionWrapper">
@@ -143,6 +129,20 @@
     <TypeIdentifier>
       <HashCode>AgAAQAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAIAAEA=</HashCode>
       <FileName>Reagent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.Simulation.Controller" Collapsed="true">
+    <Position X="1.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAgAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Simulation\SimulationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.ModelWrapper">
+    <Position X="10" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelWrapper.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="sharpSystems.IReactionFactory" Collapsed="true">

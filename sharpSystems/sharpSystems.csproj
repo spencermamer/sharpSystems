@@ -44,8 +44,8 @@
     <Compile Include="CompartmentBase.cs" />
     <Compile Include="Compartment.cs" />
     <Compile Include="ComponentType.cs" />
-    <Compile Include="Constant.cs" />
-    <Compile Include="IPausableSimulator.cs" />
+    <Compile Include="ModelWrapper.cs" />
+    <Compile Include="Simulation\IPausableSimulator.cs" />
     <Compile Include="IReaction.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Modeler.cs" />
@@ -56,8 +56,8 @@
     <Compile Include="Role.cs" />
     <Compile Include="ReactionWrapper.cs" />
     <Compile Include="Reagent.cs" />
-    <Compile Include="Simulation.cs" />
-    <Compile Include="SimulationController.cs" />
+    <Compile Include="Simulation\Simulation.cs" />
+    <Compile Include="Simulation\SimulationController.cs" />
     <Compile Include="StochasticReactionWrapper.cs" />
     <Compile Include="SpecieBase.cs" />
     <Compile Include="Component.cs" />
