@@ -45,7 +45,6 @@
     <Compile Include="Compartment.cs" />
     <Compile Include="ComponentType.cs" />
     <Compile Include="ModelWrapper.cs" />
-    <Compile Include="Simulation\IPausableSimulator.cs" />
     <Compile Include="IReaction.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Modeler.cs" />

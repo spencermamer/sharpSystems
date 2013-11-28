@@ -4,13 +4,12 @@ using System.Text;
 
 namespace sharpSystems
 {
-    namespace Simulation
+    
+    public abstract class Controller
     {
-        public abstract class Controller
-        {
-            public abstract void SendCancelRequest();
-            public abstract void SendStopRequest();
-            public abstract void GetStatus();
-        }
+        public abstract void SendCancelRequest();
+        public abstract void SendStopRequest();
+        public abstract void GetStatus();
     }
+    
 }

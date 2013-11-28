@@ -131,18 +131,18 @@
       <FileName>Reagent.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="sharpSystems.Simulation.Controller" Collapsed="true">
-    <Position X="1.75" Y="7.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAgAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Simulation\SimulationController.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="sharpSystems.ModelWrapper">
     <Position X="10" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelWrapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.Controller" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAgAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Simulation\SimulationController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="sharpSystems.IReactionFactory" Collapsed="true">
