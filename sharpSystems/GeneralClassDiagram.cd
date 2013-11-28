@@ -70,7 +70,7 @@
   <Class Name="sharpSystems.Reaction" Collapsed="true">
     <Position X="5.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAASEAAAAAAAAAAAAAABACAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAACAQAAASEAAAAAAAAAAAAAABACAAAQ=</HashCode>
       <FileName>Reaction.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -145,6 +145,27 @@
       <FileName>StochasticSimulation.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="sharpSystems.StochasticReactionWrapper">
+    <Position X="21.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StochasticReactionWrapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.ReactionWrapper">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReactionWrapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sharpSystems.Reagent">
+    <Position X="8.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAQAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAIAAEA=</HashCode>
+      <FileName>Reagent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="sharpSystems.IReactionFactory" Collapsed="true">
     <Position X="0.5" Y="4.25" Width="1.25" />
     <TypeIdentifier>
@@ -157,6 +178,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAQAAgAAAAAIAIAAAA=</HashCode>
       <FileName>ComponentType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="sharpSystems.Role">
+    <Position X="11.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Role.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

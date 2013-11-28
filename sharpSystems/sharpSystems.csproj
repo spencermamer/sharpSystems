@@ -55,8 +55,12 @@
     <Compile Include="ParameterBase.cs" />
     <Compile Include="Reaction.cs" />
     <Compile Include="ReactionBase.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="ReactionWrapper.cs" />
+    <Compile Include="Reagent.cs" />
     <Compile Include="Simulation.cs" />
     <Compile Include="SimulationController.cs" />
+    <Compile Include="StochasticReactionWrapper.cs" />
     <Compile Include="SpecieBase.cs" />
     <Compile Include="Component.cs" />
     <Compile Include="Program.cs" />

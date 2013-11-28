@@ -6,8 +6,20 @@ namespace sharpSystems
 {
     public class Reaction : ReactionBase, IReactionFactory
     {
-        protected List<Reagent> products;
-        protected List<Reagent> reactants;
+        private List<Reagent> products;
+
+        public Reagent[] ProductsArray
+        {
+            get { return products.ToArray(); }
+        }
+        private List<Reagent> reactants;
+
+        public Reagent[] ReactantArray
+        {
+            get { return reactants.ToArray(); }
+        }
+
+        private double rateConst;
 
         public Reaction(string name)
             : base(name)

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace sharpSystems
 {
-    public class ReactionBase : Component
+    public enum Role
     {
-        public ReactionBase(string name) : base(name) { }
+        REACTANT, PRODUCT, 
     }
 }
