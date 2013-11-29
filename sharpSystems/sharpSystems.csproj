@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CompartmentBase.cs" />
     <Compile Include="Compartment.cs" />
+    <Compile Include="ComponentList.cs" />
     <Compile Include="ComponentType.cs" />
     <Compile Include="ConsoleReporter.cs" />
     <Compile Include="DeterministicSimulator.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="IController.cs" />
     <Compile Include="IRecorder.cs" />
     <Compile Include="ISimulator.cs" />
+    <Compile Include="Iterator.cs" />
     <Compile Include="ModelWrapper.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Modeler.cs" />
@@ -58,7 +60,9 @@
     <Compile Include="ParameterBase.cs" />
     <Compile Include="Reaction.cs" />
     <Compile Include="ReactionBase.cs" />
-    <Compile Include="ResultPrinter.cs" />
+    <Compile Include="ReactionIterator.cs" />
+    <Compile Include="ReactionList.cs" />
+    <Compile Include="Reporter.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="ReactionWrapper.cs" />
     <Compile Include="Reagent.cs" />
@@ -77,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="Controller-Simulator Class Diagrams.cd" />
     <None Include="GeneralClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace sharpSystems
 {
-    public class Reaction : ReactionBase, IReactionFactory
+    public class Reaction : ReactionBase
     {
         private List<Reagent> products;
 
@@ -20,6 +20,12 @@ namespace sharpSystems
         }
 
         private double rateConst;
+
+        public double RateConst
+        {
+            get { return rateConst; }
+            set { rateConst = value; }
+        }
 
         public Reaction(string name)
             : base(name)

@@ -10,22 +10,31 @@ namespace sharpSystems
     {
         static void Main(string[] args)
         {
-            Compartment cell = new Compartment("cell", 10.0);
-            ProtoSpecie pA = new ProtoSpecie("A");
-            ProtoSpecie pB = new ProtoSpecie("B");
+            Modeler mlr = new Modeler();
+            var cell = mlr.CreateCompartment("cell", null, 50.0);
+            var pA = mlr.DefineNewSpecie("A");
+            Console.WriteLine(pA);
+            var pB = mlr.DefineNewSpecie("B");
+            var A = mlr.PlaceSpecie(pA, cell, 5000);
+            var B = mlr.PlaceSpecie(pB, cell, 100);
+            Reaction r1 = new Reaction("For");
+            Reaction r2 = new Reaction("Rev");
 
-            Specie A = new Specie(pA, cell, 10);
-            Specie B = new Specie(pB, cell, 500);
+            r1.AddReactant(A, 2);
 
-            Reaction rxn = new Reaction("test");
-            rxn.Rate = 1.0E-9;
-            rxn.AddReactant(A, 1);
-            rxn.AddProduct(B, 1);
+            r1.AddProduct(B);
+            r1.RateConst = .001;
+            r2.AddReactant(B, 1);
+            r2.AddProduct(A, 2);
+            r2.RateConst = .0002;
 
-            ReactionWrapper rxnWrap = new StochasticReactionWrapper(rxn);
-            Console.WriteLine(rxnWrap.CalculatePropensity());
-            Console.WriteLine(StochasticReactionWrapper.CalculatePropensity(rxn));
            
+            ReactionList rlist = new ReactionList();
+            rlist[0] = r1;
+            rlist[1] = r2;
+
+            GillespieStochasticSimulator simulator = new GillespieStochasticSimulator(rlist);
+            simulator.CalculateA0();
         }
     }
 }

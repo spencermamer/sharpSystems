@@ -17,7 +17,7 @@ namespace sharpSystems
         public string Name
         {
             get { return name; }
-            protected set { name = value.ToLower(); }
+            protected set { name = value; }
         }
 
         // BEGIN CONSTRUCTOR DECLARATIONS

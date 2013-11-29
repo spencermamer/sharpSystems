@@ -6,11 +6,10 @@ namespace sharpSystems
 {
     public class StochasticReactionWrapper : ReactionWrapper
     {
-
         // CONSTRUCTOR DECLARATION
         public StochasticReactionWrapper(Reaction reaction) : base(reaction) 
         {
-
+           
         }
         // METHOD DECLARATIONS
         private double CalculateH()
@@ -19,6 +18,7 @@ namespace sharpSystems
             foreach (Reagent rg in reactants)
             {
                 h *= rg.Specie.Quantity;
+               
             }
             return h;
         }
@@ -29,16 +29,17 @@ namespace sharpSystems
             foreach(Reagent rg in reactants) 
             {
                 h *= rg.Specie.Quantity;
+                
             }
             return h;
         }
 
         public static double CalculatePropensity(Reaction reaction) 
         {
-            return reaction.Rate * CalculateH(reaction.ReactantArray);
+            return reaction.RateConst * CalculateH(reaction.ReactantArray);
         }
 
-
+        
         public override double CalculatePropensity()
         {
             propensity = rateConst * CalculateH();

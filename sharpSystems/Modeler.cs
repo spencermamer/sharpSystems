@@ -10,12 +10,12 @@ namespace sharpSystems
         private List<Specie> species;
         private List<Reaction> reactions;
         private List<Compartment> compartments;
-        private List<ProtoSpecie> protospecies;
+        //private List<ProtoSpecie> protospecies;
 
         private Dictionary<string, Compartment> compartmentMap;
         private Dictionary<string, ProtoSpecie> protospecieMap;
 
-        public ProtoSpecie[] ProtoSpecieArray { get { return protospecies.ToArray(); } }
+        //public ProtoSpecie[] ProtoSpecieArray { get { return protospecies.ToArray(); } }
         public Specie[] SpecieArray { get { return species.ToArray(); } }
         public Reaction[] ReactionArray { get { return reactions.ToArray();}}
         public Compartment[] CompartmentArray { get { return compartments.ToArray(); } } 
@@ -27,6 +27,7 @@ namespace sharpSystems
             this.species = new List<Specie>();
             this.reactions = new List<Reaction>();
             this.protospecieMap = new Dictionary<string, ProtoSpecie>();
+            //his.protospecies = new List<ProtoSpecie>();
             this.compartmentMap = new Dictionary<string, Compartment>();
             this.compartments = new List<Compartment>();
         }
@@ -41,10 +42,11 @@ namespace sharpSystems
 
         
         // Enters ProtoSpecie into dictionary, using its MyTag as the lookup key.
-        private void AddProtoSpecie(ProtoSpecie proto)
+        private ProtoSpecie AddProtoSpecie(ProtoSpecie proto)
         {
             protospecieMap.Add(proto.Name, proto);
-            protospecies.Add(proto);
+            return proto;
+           // protospecies.Add(proto);
         }
 
         // Adds Specie to species list
@@ -68,8 +70,7 @@ namespace sharpSystems
         // Creates a new ProtoSpecie within the model, and returns an identification tag.
         public string DefineNewSpecie(string name)
         {
-            ProtoSpecie newProto = ProtoSpecieFactory(name);
-            AddProtoSpecie(newProto);
+            ProtoSpecie newProto = AddProtoSpecie(ProtoSpecieFactory(name));
             return newProto.Name;
         }
 
@@ -98,11 +99,12 @@ namespace sharpSystems
         {
             return AddCompartmentEntry(CompartmentFactory(name, parent, volume));
         }
-
+        /*
         public Model MakeModel()
         {
             return new Model(protospecies: ProtoSpecieArray, compartments: CompartmentArray, reactions: ReactionArray, species: SpecieArray);
         }
+         * */
 
 
     }

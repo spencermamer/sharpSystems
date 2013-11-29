@@ -21,7 +21,7 @@ namespace sharpSystems
         public ReactionWrapper(Reaction reaction)
         {
             this.reactants = reaction.ReactantArray;
-            this.rateConst = reaction.Rate;
+            this.rateConst = reaction.RateConst;
         }
 
         public abstract double CalculatePropensity();
