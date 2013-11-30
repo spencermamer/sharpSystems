@@ -21,11 +21,24 @@ namespace sharpSystems
             private set { stoich = value; }
         }
 
+        public int Quantity
+        {
+            get { return specie.Quantity; }
+            set { specie.Quantity = value; }
+
+        }
         private Role reactionRole;
         public Role ReactionRole
         {
             get { return reactionRole; }
             private set { reactionRole = value; }
+        }
+
+        private string name;
+        public string Name
+        {
+            get { return specie.Name; }
+            private set { name = value; }
         }
 
         // CONSTRUCTOR DECLARATIONS
@@ -35,5 +48,6 @@ namespace sharpSystems
             this.stoich = stoich;
             this.reactionRole = role;
         }
+
     }
 }

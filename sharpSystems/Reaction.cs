@@ -26,7 +26,21 @@ namespace sharpSystems
             get { return rateConst; }
             set { rateConst = value; }
         }
+        private Reagent[] reagentArray;
+        public Reagent[] ReagentArray
+        {
+            get
+            {
+                List<Reagent> list = new List<Reagent>();
+                list.AddRange(ReactantArray);
+                list.AddRange(ProductsArray);
+                reagentArray = list.ToArray();
+                return reagentArray;
+            }
+            protected set { reagentArray = value;}
+        }
 
+        // BEGIN CONSTRUCTOR DECLARATION
         public Reaction(string name)
             : base(name)
         {
@@ -47,7 +61,7 @@ namespace sharpSystems
 
         public void AddProduct(Specie specie, int stoich = 1)
         {
-            AddReagentEntry(ReagentFactory(specie, stoich, Role.REACTANT));
+            AddReagentEntry(ReagentFactory(specie, stoich, Role.PRODUCT));
         }
 
         private Reagent AddReagentEntry(Reagent reagent)

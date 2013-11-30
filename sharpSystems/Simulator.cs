@@ -23,6 +23,13 @@ namespace sharpSystems
             } 
         }
 
+        abstract public double TimeElapsed
+        {
+            get;
+            
+        }
+
+        public abstract bool IsRunning { get; set; }
 
 
         public void SetController(Controller controller)
@@ -34,5 +41,8 @@ namespace sharpSystems
         {
             this.reporter = reporter;
         }
+
+        public abstract void Simulate();
+        
     }
 }

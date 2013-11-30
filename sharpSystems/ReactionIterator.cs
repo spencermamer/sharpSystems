@@ -46,6 +46,11 @@ namespace sharpSystems
             return current >= reactions.Count ? true : false;   
         }
 
+        public int CurrentIndex()
+        {
+            return current;
+        }
+
         public override object CurrentItem()
         {
             return reactions[current];

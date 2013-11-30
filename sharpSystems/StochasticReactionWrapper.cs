@@ -11,6 +11,7 @@ namespace sharpSystems
         {
            
         }
+
         // METHOD DECLARATIONS
         private double CalculateH()
         {
@@ -23,27 +24,44 @@ namespace sharpSystems
             return h;
         }
         
-        private static double CalculateH(Reagent[] reactants) 
-        {
-            double h = 1.0;
-            foreach(Reagent rg in reactants) 
-            {
-                h *= rg.Specie.Quantity;
-                
-            }
-            return h;
-        }
-
-        public static double CalculatePropensity(Reaction reaction) 
-        {
-            return reaction.RateConst * CalculateH(reaction.ReactantArray);
-        }
-
         
         public override double CalculatePropensity()
         {
             propensity = rateConst * CalculateH();
             return propensity;
+        }
+
+        private void UpdateSpecieQuantity(Reagent reagent)
+        {
+
+            switch (reagent.ReactionRole)
+            {
+                case Role.PRODUCT:
+                    reagent.Quantity += reagent.Stoich;
+                    break;
+                case Role.REACTANT:
+                    if (reagent.Quantity >= reagent.Stoich) 
+                    {
+                        reagent.Quantity -= reagent.Stoich;
+
+                    }
+                    else
+                    {
+                        throw new Exception("Error: Not enough " + reagent.Name + "to react. Something might be wrong with the stoichiometry provided.");
+                    }
+                    break;      
+                default:
+                    throw new Exception("Error: Could not determine reagent role.");
+            }
+        }
+
+        public override void FireReaction()
+        {
+            foreach(Reagent reagent in reagents) 
+            {
+                UpdateSpecieQuantity(reagent);
+
+            }
         }
        
     }

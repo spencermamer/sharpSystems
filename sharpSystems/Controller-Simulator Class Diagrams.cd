@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="sharpSystems.Controller" Collapsed="true">
+  <Class Name="sharpSystems.Controller">
     <Position X="7.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAoAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -11,7 +11,7 @@
   <Class Name="sharpSystems.Simulator" Collapsed="true">
     <Position X="2" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAAAEAAAAAAAAAEAAAAAAECAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAAAEAAAABQAAAEAAAAAAECAAABAAAAAA=</HashCode>
       <FileName>Simulator.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -33,7 +33,7 @@
   <Class Name="sharpSystems.GillespieStochasticSimulator">
     <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAIQDAAQABQBAgRAAgAACgICQAAAAAAAA=</HashCode>
       <FileName>GillespieStochasticSimulator.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -62,14 +62,14 @@
   <Class Name="sharpSystems.SimulationController">
     <Position X="6.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAAABABAAAAAAAoAACAAAAAAAAAAAAIAA=</HashCode>
       <FileName>SimulationController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="sharpSystems.ISimulator" Collapsed="true">
     <Position X="5.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAAAAAAAABQAAAEAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>ISimulator.cs</FileName>
     </TypeIdentifier>
   </Interface>
