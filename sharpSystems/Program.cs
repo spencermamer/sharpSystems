@@ -14,7 +14,6 @@ namespace sharpSystems
             Modeler mlr = new Modeler();
             var cell = mlr.CreateCompartment("cell", null, 50.0);
             var pA = mlr.DefineNewSpecie("A");
-            Console.WriteLine(pA);
             var pB = mlr.DefineNewSpecie("B");
             var A = mlr.PlaceSpecie(pA, cell, 5000);
             var B = mlr.PlaceSpecie(pB, cell, 100);

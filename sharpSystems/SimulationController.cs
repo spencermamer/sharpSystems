@@ -8,8 +8,7 @@ namespace sharpSystems
 {
     public class SimulationController : Controller
     {
-        private bool isPaused;
-        private bool isRunning;
+        private bool isRunning, isPaused;
         private Thread simulationThread;
         private Simulator simulator;
 
@@ -21,6 +20,8 @@ namespace sharpSystems
 
         public override void SendTerminationSignal()
         {
+            Console.WriteLine("Simulation Terminated!");
+
             simulationThread.Abort();
         }
 
@@ -31,11 +32,15 @@ namespace sharpSystems
                 if (!isPaused)
                 {
                     simulationThread.Suspend();
+                    this.isPaused = true;
                     Console.WriteLine("Simulation Paused!");
                 }
                 else
                 {
                     simulationThread.Resume();
+                    this.isPaused = false;
+                    Console.WriteLine("Simulation Resumed!");
+
                 }
             }
            
@@ -47,10 +52,15 @@ namespace sharpSystems
         {
             get { return simulator.TimeElapsed; }
         }
+        
         public override void RunSimulation()
         {
-            simulator.IsRunning = true;
+            this.isRunning = true;
+            this.isPaused = false;
             simulationThread.Start();
+            simulator.IsRunning = true;
+            Console.WriteLine("Simulation Started!");
+
             
         }
 }
