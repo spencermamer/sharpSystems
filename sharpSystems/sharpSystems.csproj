@@ -46,12 +46,12 @@
     <Compile Include="ComponentList.cs" />
     <Compile Include="ComponentType.cs" />
     <Compile Include="ConsoleReporter.cs" />
-    <Compile Include="DeterministicSimulator.cs" />
-    <Compile Include="FileReporter.cs" />
-    <Compile Include="GillespieStochasticSimulator.cs" />
-    <Compile Include="IController.cs" />
-    <Compile Include="IRecorder.cs" />
-    <Compile Include="ISimulator.cs" />
+    <Compile Include="Simulation\DeterministicSimulator.cs" />
+    <Compile Include="Simulation\FileReporter.cs" />
+    <Compile Include="Simulation\GillespieStochasticSimulator.cs" />
+    <Compile Include="Simulation\IController.cs" />
+    <Compile Include="Simulation\IRecorder.cs" />
+    <Compile Include="Simulation\ISimulator.cs" />
     <Compile Include="Iterator.cs" />
     <Compile Include="ModelWrapper.cs" />
     <Compile Include="Model.cs" />
@@ -62,12 +62,12 @@
     <Compile Include="ReactionBase.cs" />
     <Compile Include="ReactionIterator.cs" />
     <Compile Include="ReactionList.cs" />
-    <Compile Include="Reporter.cs" />
+    <Compile Include="Simulation\Reporter.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="ReactionWrapper.cs" />
     <Compile Include="Reagent.cs" />
-    <Compile Include="SimulationController.cs" />
-    <Compile Include="Simulator.cs" />
+    <Compile Include="Simulation\SimulationController.cs" />
+    <Compile Include="Simulation\Simulator.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="StochasticReactionWrapper.cs" />
     <Compile Include="SpecieBase.cs" />
@@ -77,7 +77,7 @@
     <Compile Include="ProtoSpecie.cs" />
     <Compile Include="Specie.cs" />
     <Compile Include="SpecieTransferReaction.cs" />
-    <Compile Include="StochasticSimulator.cs" />
+    <Compile Include="Simulation\StochasticSimulator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

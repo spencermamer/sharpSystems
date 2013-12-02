@@ -47,7 +47,7 @@ namespace sharpSystems
                     }
                     else
                     {
-                        throw new Exception("Error: Not enough " + reagent.Name + "to react. Something might be wrong with the stoichiometry provided.");
+                        throw new Exception("Error: Not enough " + reagent.Name + " in "+ this.Name +" (Propensity: "+Propensity+"). Something might be wrong with the stoichiometry provided.");
                     }
                     break;      
                 default:
@@ -60,8 +60,10 @@ namespace sharpSystems
             foreach(Reagent reagent in reagents) 
             {
                 UpdateSpecieQuantity(reagent);
-
+                
             }
+            // REMOVE THIS LINE
+            
         }
        
     }

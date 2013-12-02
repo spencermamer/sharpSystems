@@ -15,7 +15,7 @@ namespace sharpSystems
         private double currentTime;
         private int step;
         private double a0;
-       
+        private Specie[] reagents;
         private bool isRunning;
 
         public override bool IsRunning
@@ -31,11 +31,11 @@ namespace sharpSystems
         }
 
         // CONSTRUCTOR DECLARATIONS
-        public GillespieStochasticSimulator(ReactionList reactions)
+        public GillespieStochasticSimulator(ReactionList reactions, Specie[] reagents)
         {
             this.reactions = reactions;
             this.random = new Random();
-            
+            this.reagents = reagents;
         }
 
         // METHOD DECLARATIONS
@@ -110,14 +110,13 @@ namespace sharpSystems
         private void Step()
         {
             GenerateRandomDoublePair(out r1, out r2);
-            //Console.WriteLine("R1: {0} R2: {1}", r1, r2);
             
             double tau = CalculateTao(a0, r1);
             currentTime += tau;
 
             StochasticReactionWrapper activeReaction = DetermineMu(a0, r2);
-            activeReaction.FireReaction();
-            
+            activeReaction.FireReaction(); 
+            Console.WriteLine("{0}\t{1}\t{2}\t{3}", currentTime, reagents[0].Quantity, reagents[1].Quantity, reagents[2].Quantity);
 
             step++;
             a0 = CalculateA0();

@@ -13,7 +13,6 @@ namespace sharpSystems
         protected Reagent[] reactants;
         protected Reagent[] products;
         protected Reagent[] reagents;
-
         protected double propensity; 
         protected double rateConst;
         protected string name;
@@ -41,6 +40,7 @@ namespace sharpSystems
         public ReactionWrapper(Reaction reaction)
         {
             this.name = reaction.Name;
+            
             this.reactants = reaction.ReactantArray;
             this.products = reaction.ProductsArray;
             this.rateConst = reaction.RateConst;
@@ -48,7 +48,7 @@ namespace sharpSystems
         }
 
         public abstract double CalculatePropensity();
-        public abstract void FireReaction();
+        public abstract void FireReaction(); // REMOVE DOUBLE T
         
        
 
