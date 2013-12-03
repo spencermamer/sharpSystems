@@ -60,8 +60,11 @@ namespace sharpSystems
             simulationThread.Start();
             simulator.IsRunning = true;
             Console.WriteLine("Simulation Started!");
+        }
 
-            
+        public override void Reset()
+        {
+           
         }
 }
 }

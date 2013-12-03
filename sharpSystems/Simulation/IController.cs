@@ -6,5 +6,6 @@ namespace sharpSystems
         void RunSimulation();
         void SendTerminationSignal();
         void TogglePause();
+        void Reset();
     }
 }

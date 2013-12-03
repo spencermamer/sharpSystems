@@ -45,7 +45,7 @@
     <Compile Include="Compartment.cs" />
     <Compile Include="ComponentList.cs" />
     <Compile Include="ComponentType.cs" />
-    <Compile Include="ConsoleReporter.cs" />
+    <Compile Include="Simulation\ConsoleReporter.cs" />
     <Compile Include="Simulation\DeterministicSimulator.cs" />
     <Compile Include="Simulation\FileReporter.cs" />
     <Compile Include="Simulation\GillespieStochasticSimulator.cs" />
@@ -68,7 +68,7 @@
     <Compile Include="Reagent.cs" />
     <Compile Include="Simulation\SimulationController.cs" />
     <Compile Include="Simulation\Simulator.cs" />
-    <Compile Include="Controller.cs" />
+    <Compile Include="Simulation\Controller.cs" />
     <Compile Include="StochasticReactionWrapper.cs" />
     <Compile Include="SpecieBase.cs" />
     <Compile Include="Component.cs" />

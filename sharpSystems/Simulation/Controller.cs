@@ -10,7 +10,7 @@ namespace sharpSystems
         public abstract void SendTerminationSignal();
         public abstract void TogglePause();
         public abstract void RunSimulation();
-
+        public abstract void Reset();
         
     }
     
