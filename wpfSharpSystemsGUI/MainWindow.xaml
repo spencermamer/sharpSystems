@@ -1,0 +1,7 @@
+﻿<NavigationWindow x:Class="wpfSharpSystemsGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="testGUI sharpSystems" Height="350" Width="500"  Source="Home.xaml">
+  
+   
+</NavigationWindow>

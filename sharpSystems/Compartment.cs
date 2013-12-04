@@ -62,7 +62,7 @@ namespace sharpSystems
             }
             else
             {
-                Console.WriteLine("Error: compartment already contains {1}. ",specie.Name);
+                Console.WriteLine("Error: compartment already contains {0}. ",specie.Name);
                 return false;
             }
         }

@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharpSystems", "sharpSystems\sharpSystems.csproj", "{892687A9-91A7-41AF-855B-6E2BF5299DD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpfSharpSystemsGUI", "wpfSharpSystemsGUI\wpfSharpSystemsGUI.csproj", "{3F0EC1F2-CFB3-4514-A3E0-0196B4612064}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,16 @@ Global
 		{892687A9-91A7-41AF-855B-6E2BF5299DD0}.Release|ARM.ActiveCfg = Release|Any CPU
 		{892687A9-91A7-41AF-855B-6E2BF5299DD0}.Release|x64.ActiveCfg = Release|Any CPU
 		{892687A9-91A7-41AF-855B-6E2BF5299DD0}.Release|x86.ActiveCfg = Release|Any CPU
+		{3F0EC1F2-CFB3-4514-A3E0-0196B4612064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F0EC1F2-CFB3-4514-A3E0-0196B4612064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F0EC1F2-CFB3-4514-A3E0-0196B4612064}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{3F0EC1F2-CFB3-4514-A3E0-0196B4612064}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3F0EC1F2-CFB3-4514-A3E0-0196B4612064}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3F0EC1F2-CFB3-4514-A3E0-0196B4612064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F0EC1F2-CFB3-4514-A3E0-0196B4612064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F0EC1F2-CFB3-4514-A3E0-0196B4612064}.Release|ARM.ActiveCfg = Release|Any CPU
+		{3F0EC1F2-CFB3-4514-A3E0-0196B4612064}.Release|x64.ActiveCfg = Release|Any CPU
+		{3F0EC1F2-CFB3-4514-A3E0-0196B4612064}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
