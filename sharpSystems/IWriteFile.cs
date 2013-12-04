@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace sharpSystems
 {
-    public abstract class FileReporter : IReport
+    public interface IWriteFile
     {
-        Fiwle file;
+        void Open();
+        void Close();
 
     }
 }

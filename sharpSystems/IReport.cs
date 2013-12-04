@@ -7,7 +7,7 @@ namespace sharpSystems
 {
     public interface IReport
     {
-        void Receive();
+
         void SendRecorderReport(Recorder recorder);
 
     }

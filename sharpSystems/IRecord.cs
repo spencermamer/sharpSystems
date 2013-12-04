@@ -8,8 +8,7 @@ namespace sharpSystems
 {
     public interface IRecord
     {
-        void RecordEntry();
-
+        void Receive(ReportEntry entry);
 
     }
 }

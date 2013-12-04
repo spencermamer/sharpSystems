@@ -45,11 +45,12 @@
     <Compile Include="Compartment.cs" />
     <Compile Include="ComponentList.cs" />
     <Compile Include="ComponentType.cs" />
+    <Compile Include="IWriteFile.cs" />
     <Compile Include="Recorder.cs" />
     <Compile Include="ConsoleReporter.cs" />
     <Compile Include="IRecord.cs" />
     <Compile Include="DeterministicSimulator.cs" />
-    <Compile Include="FileReporter.cs" />
+    <Compile Include="TSVFileRecorder.cs" />
     <Compile Include="GillespieStochasticSimulator.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IReport.cs" />
@@ -64,7 +65,7 @@
     <Compile Include="ReactionBase.cs" />
     <Compile Include="ReactionIterator.cs" />
     <Compile Include="ReactionList.cs" />
-    <Compile Include="Reporter.cs" />
+    <Compile Include="ReportEntry.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="ReactionWrapper.cs" />
     <Compile Include="Reagent.cs" />
