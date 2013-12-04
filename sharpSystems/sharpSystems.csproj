@@ -41,48 +41,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompartmentBase.cs" />
-    <Compile Include="Compartment.cs" />
-    <Compile Include="ComponentList.cs" />
-    <Compile Include="ComponentType.cs" />
-    <Compile Include="ConsoleReporter.cs" />
-    <Compile Include="Simulation\DeterministicSimulator.cs" />
-    <Compile Include="Simulation\FileReporter.cs" />
-    <Compile Include="Simulation\GillespieStochasticSimulator.cs" />
+    <Compile Include="Core\CompartmentBase.cs" />
+    <Compile Include="Core\Compartment.cs" />
+    <Compile Include="Core\ComponentList.cs" />
+    <Compile Include="Core\ComponentType.cs" />
+    <Compile Include="Simulation\Reporters\ConsoleReporter.cs" />
+    <Compile Include="Simulation\Simulators\DeterministicSimulator.cs" />
+    <Compile Include="Simulation\Reporters\FileReporter.cs" />
+    <Compile Include="Simulation\Simulators\GillespieStochasticSimulator.cs" />
     <Compile Include="Simulation\IController.cs" />
     <Compile Include="Simulation\IRecorder.cs" />
     <Compile Include="Simulation\ISimulator.cs" />
-    <Compile Include="Iterator.cs" />
-    <Compile Include="ModelWrapper.cs" />
-    <Compile Include="Model.cs" />
-    <Compile Include="Modeler.cs" />
-    <Compile Include="Parameter.cs" />
-    <Compile Include="ParameterBase.cs" />
-    <Compile Include="Reaction.cs" />
-    <Compile Include="ReactionBase.cs" />
-    <Compile Include="ReactionIterator.cs" />
-    <Compile Include="ReactionList.cs" />
-    <Compile Include="Simulation\Reporter.cs" />
-    <Compile Include="Role.cs" />
-    <Compile Include="ReactionWrapper.cs" />
-    <Compile Include="Reagent.cs" />
-    <Compile Include="Simulation\SimulationController.cs" />
-    <Compile Include="Simulation\Simulator.cs" />
-    <Compile Include="Controller.cs" />
-    <Compile Include="StochasticReactionWrapper.cs" />
-    <Compile Include="SpecieBase.cs" />
-    <Compile Include="Component.cs" />
+    <Compile Include="Core\Iterator.cs" />
+    <Compile Include="Simulation\ModelWrapper.cs" />
+    <Compile Include="Core\Model.cs" />
+    <Compile Include="Modeller\Modeler.cs" />
+    <Compile Include="Core\Parameter.cs" />
+    <Compile Include="Core\ParameterBase.cs" />
+    <Compile Include="Core\Reaction.cs" />
+    <Compile Include="Core\ReactionBase.cs" />
+    <Compile Include="Simulation\ReactionIterator.cs" />
+    <Compile Include="Core\ReactionList.cs" />
+    <Compile Include="Simulation\Reporters\Reporter.cs" />
+    <Compile Include="Simulation\Role.cs" />
+    <Compile Include="Simulation\ReactionWrapper.cs" />
+    <Compile Include="Core\Reagent.cs" />
+    <Compile Include="Simulation\Controllers\SimulationController.cs" />
+    <Compile Include="Simulation\Simulators\Simulator.cs" />
+    <Compile Include="Simulation\Controllers\Controller.cs" />
+    <Compile Include="Simulation\StochasticReactionWrapper.cs" />
+    <Compile Include="Core\SpecieBase.cs" />
+    <Compile Include="Core\Component.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProtoSpecie.cs" />
-    <Compile Include="Specie.cs" />
-    <Compile Include="SpecieTransferReaction.cs" />
-    <Compile Include="Simulation\StochasticSimulator.cs" />
+    <Compile Include="Core\ProtoSpecie.cs" />
+    <Compile Include="Core\Specie.cs" />
+    <Compile Include="Core\SpecieTransferReaction.cs" />
+    <Compile Include="Simulation\Simulators\StochasticSimulator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Controller-Simulator Class Diagrams.cd" />
-    <None Include="GeneralClassDiagram.cd" />
+    <None Include="Diagrams\Controller-Simulator Class Diagrams.cd" />
+    <None Include="Diagrams\GeneralClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="General\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
