@@ -17,7 +17,7 @@ namespace sharpSystems
             private set { this.entryString = value; }
         }
 
-        // CONSTRUCTOR DECLARATIONS
+        #region Constructor Declarations
 
         public ReportEntry(double currentTime, int[] quantities)
         {
@@ -25,9 +25,9 @@ namespace sharpSystems
             this.quantities = quantities;
             this.entryString = GetReportEntryString(currentTimePoint, this.quantities);
         }
-        
-      
-        // METHOD DECLARATIONS
+        #endregion 
+
+        #region Method Declarations
         private string GetReportEntryString(double currentTimePoint, int[] quantities)
         {
             StringBuilder sb = new StringBuilder();
@@ -43,5 +43,10 @@ namespace sharpSystems
             return sb.ToString();
         }
 
+        public override string ToString()
+        {
+            return GetReportEntryString(currentTimePoint, quantities);
+        }
+        #endregion
     }
 }

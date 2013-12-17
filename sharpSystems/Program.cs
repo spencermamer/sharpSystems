@@ -11,7 +11,7 @@ namespace sharpSystems
     {
         static void Main(string[] args)
         {
-            Modeler mlr = new Modeler();
+            /*Modeler mlr = new Modeler();
             var cell = mlr.CreateCompartment("cell", null, 50.0);
             var pA = mlr.DefineNewSpecie("A");
             var pB = mlr.DefineNewSpecie("B");
@@ -79,6 +79,17 @@ namespace sharpSystems
                 
 
             }
+             * */
+
+            TSVFileRecorder fr = new TSVFileRecorder("test.txt");
+            int[] quant = new int[3] {1,2,3};
+            ReportEntry entry = new ReportEntry(0.0, quant);
+            fr.Open();
+            fr.Receive(entry);
+            quant = new int[3] { 2, 3, 1 };
+            entry = new ReportEntry(1.0, quant);
+            fr.Receive(entry);
+            fr.Close();
         }
     }
 }

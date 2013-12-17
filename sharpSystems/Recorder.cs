@@ -9,5 +9,10 @@ namespace sharpSystems
     public abstract class Recorder : IRecord
     {
         public abstract void RecordEntry();
+
+        public void Receive(ReportEntry entry)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

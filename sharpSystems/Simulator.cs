@@ -37,12 +37,14 @@ namespace sharpSystems
             this.controller = controller;
         }
 
+       
+        public abstract void Simulate();
+
+
+
         public void SetReporter(Reporter reporter)
         {
-            this.reporter = reporter;
+            throw new NotImplementedException();
         }
-
-        public abstract void Simulate();
-        
     }
 }

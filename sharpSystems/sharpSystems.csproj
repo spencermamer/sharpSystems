@@ -50,6 +50,7 @@
     <Compile Include="ConsoleReporter.cs" />
     <Compile Include="IRecord.cs" />
     <Compile Include="DeterministicSimulator.cs" />
+    <Compile Include="Reporter.cs" />
     <Compile Include="TSVFileRecorder.cs" />
     <Compile Include="GillespieStochasticSimulator.cs" />
     <Compile Include="IController.cs" />
